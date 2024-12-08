@@ -1,5 +1,4 @@
 from network import Network
-from plyer import notification
 import os
 
 class Main:
@@ -33,12 +32,6 @@ class Main:
             message = f'{interface} - OK'
         else:
             message = f'{interface} - Error, logs in {self.log_file}'
-
-        notification.notify(
-            title=f'Результат для {interface}',
-            message=message,
-            timeout=120
-        )
 
 
 main = Main()
