@@ -10,3 +10,28 @@ DEBUG:root:'int' object is not callable
 INFO:root:Network down
 INFO:root:Interface eth0 is down
 INFO:root:Interface eth1 is down
+DEBUG:root:Command '['ip', 'addr', 'show', 'eth0']' returned non-zero exit status 1.
+INFO:root:Network down
+DEBUG:root:Ping to wlan0 successful. Detailed info: 3 packets sent, 3 packets received.
+INFO:root:Interface wlan0 OK
+DEBUG:root:Command '['ip', 'addr', 'show', 'eth1']' returned non-zero exit status 1.
+INFO:root:Network down
+INFO:root:Interface wlan0 OK
+ERROR:root:Command '['ip', 'addr', 'show', 'eth1']' returned non-zero exit status 1.
+ERROR:root:cannot access local variable 'ip' where it is not associated with a value
+ERROR:root:Command '['ip', 'addr', 'show', 'eth0']' returned non-zero exit status 1.
+ERROR:root:cannot access local variable 'ip' where it is not associated with a value
+ERROR:root:Command '['ip', 'addr', 'show', 'eth0']' returned non-zero exit status 1.
+ERROR:root:cannot access local variable 'ip' where it is not associated with a value
+ERROR:root:Command '['ip', 'addr', 'show', 'eth0']' returned non-zero exit status 1.
+ERROR:root:cannot access local variable 'ip' where it is not associated with a value
+INFO:root:Interface wlan0 OK
+INFO:root:Interface wlan0 OK
+ERROR:root:Command '['ip', 'addr', 'show', 'eth0']' returned non-zero exit status 1.
+ERROR:root:cannot access local variable 'ip' where it is not associated with a value
+ERROR:root:Command '['ip', 'addr', 'show', 'eth0']' returned non-zero exit status 1.
+ERROR:root:cannot access local variable 'ip' where it is not associated with a value
+INFO:root:Interface wlan0 OK
+INFO:root:Interface wlan0 OK
+INFO:root:Interface wlan0 OK
+INFO:root:Interface wlan0 OK

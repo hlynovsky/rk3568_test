@@ -1,0 +1,2 @@
+eth0 - Error: cannot access local variable 'result' where it is not associated with a value
+eth1 - Error: cannot access local variable 'result' where it is not associated with a value
