@@ -1,0 +1,12 @@
+DEBUG:root:'int' object is not callable
+INFO:root:Network down
+DEBUG:root:'int' object is not callable
+INFO:root:Network down
+DEBUG:root:'int' object is not callable
+INFO:root:Network down
+DEBUG:root:'int' object is not callable
+INFO:root:Network down
+DEBUG:root:'int' object is not callable
+INFO:root:Network down
+INFO:root:Interface eth0 is down
+INFO:root:Interface eth1 is down
