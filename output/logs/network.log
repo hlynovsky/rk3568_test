@@ -1,4 +1,0 @@
-ERROR:root:Command '['ip', 'addr', 'show', 'eth0']' returned non-zero exit status 1.
-ERROR:root:cannot access local variable 'ip' where it is not associated with a value
-ERROR:root:Command '['ip', 'addr', 'show', 'eth1']' returned non-zero exit status 1.
-ERROR:root:cannot access local variable 'ip' where it is not associated with a value
