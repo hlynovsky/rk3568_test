@@ -1,0 +1,2 @@
+INFO:root:Interface eth0 OK
+ERROR:root:Error getting IP for eth1: list index out of range
