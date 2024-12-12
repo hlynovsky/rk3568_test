@@ -36,5 +36,7 @@ class Network:
 
             if result == 0:
                 logging.info(f"{interface} - ok")
+                return 0
             else:
                 logging.error(f"{interface} - not ok")
+                return 1

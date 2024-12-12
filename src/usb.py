@@ -19,7 +19,7 @@ class Usb:
             logging.root.removeHandler(handler)
 
         logging.basicConfig(
-            level=logging.INFO,
+            level=logging.DEBUG,
             format='%(asctime)s - %(levelname)s - %(message)s',
             handlers=[logging.FileHandler(self.log_file)]
         )
@@ -36,7 +36,7 @@ class Usb:
             subprocess.run(command, shell=True, check=True)
         except subprocess.CalledProcessError as e:
             logging.error(f"Command execution failed: {e}")
-            raise
+            return 1
 
     def create_test_file(self):
         logging.debug("Creating a test file...")
@@ -48,29 +48,43 @@ class Usb:
         free_space = statvfs.f_bavail * statvfs.f_frsize
         if free_space < self.TEST_FILE_SIZE:
             logging.error(f"Not enough free space on {mount_point}")
-            return False
+            return 1
         return True
 
     def mount_all(self):
         for path in self.usb_paths:
             dev_path = path.replace('/media/', '/dev/')
+            
             if not os.path.exists(path):
-                self.run_command(f'sudo mkdir -p {path}')
+                try:
+                    self.run_command(f'mkdir -p {path}')
+                except Exception as e:
+                    logging.error(f"Failed to create mount point {path}: {e}")
+                    return 1
+            
+            if not os.path.exists(dev_path):
+                logging.error(f"Device {dev_path} does not exist")
+                return 1
+            
             try:
-                self.run_command(f'sudo mount {dev_path} {path}')
+                self.run_command(f'mount {dev_path} {path}')
                 logging.debug(f"Mounted {dev_path} to {path}")
-            except Exception:
-                logging.error(f"Failed to mount {dev_path} to {path}")
+            except Exception as e:
+                logging.error(f"Failed to mount {dev_path} to {path}: {e}")
+                return 1
+        return 0
+
 
     def unmount_all(self):
         for path in self.usb_paths:
             try:
-                self.run_command(f'sudo umount {path}')
+                self.run_command(f'umount {path}')
                 logging.debug(f"Unmounted {path}")
             except Exception:
                 logging.warning(f"Failed to unmount {path}")
+                return 1
             if os.path.exists(path):
-                self.run_command(f'sudo rmdir {path}')
+                self.run_command(f'rmdir {path}')
 
     def test_write_speed(self, mount_point):
         dest_path = os.path.join(mount_point, self.TEST_FILE)
@@ -84,14 +98,14 @@ class Usb:
             return write_speed
         except Exception as e:
             logging.error(f"Write error: {e}")
-            return None
+            return 1
 
     def test_read_speed(self, mount_point):
         source_path = os.path.join(mount_point, self.TEST_FILE)
         try:
             if not os.path.exists(source_path):
                 logging.error("File for read test not found!")
-                return None
+                return 1
             logging.debug("Testing read speed...")
             start_time = time.time()
             self.run_command(f'cp {source_path} {self.READ_FILE}')
@@ -101,32 +115,32 @@ class Usb:
             return read_speed
         except Exception as e:
             logging.error(f"Read error: {e}")
-            return None
+            return 1
 
     def clean_temp_files(self):
         for file in [self.TEST_FILE, self.READ_FILE]:
             if os.path.exists(file):
                 os.remove(file)
                 logging.debug(f"Temporary file removed: {file}")
-
-    def run_tests(self):
+            
+    def run(self):
         try:
             self.create_test_file()
-            self.mount_all()
+            status = self.mount_all()
+            if status != 0:
+                logging.error("Mounting failed, stopping tests.")
+                return 1 
             for mount_point in self.usb_paths:
                 logging.debug(f"\nStarting test for {mount_point}")
-                if not self.check_free_space(mount_point):
-                    continue
                 write_speed = self.test_write_speed(mount_point)
                 read_speed = self.test_read_speed(mount_point)
-                if write_speed and read_speed:
-                    logging.info(f"USB {mount_point} Write speed = {write_speed:.2f} MB/s OK | Read speed = {read_speed:.2f} MB/s OK")
+                logging.info(f"USB {mount_point} Write speed = {write_speed:.2f} MB/s OK | Read speed = {read_speed:.2f} MB/s OK")
                 dest_path = os.path.join(mount_point, self.TEST_FILE)
                 if os.path.exists(dest_path):
                     os.remove(dest_path)
                     logging.debug(f"File removed from {mount_point}")
-        except Exception as e:
-            logging.error(f"An error occurred: {e}")
-        finally:
-            self.clean_temp_files()
             self.unmount_all()
+            return 0
+        except Exception as e:
+            logging.error(f"An error occurred during the tests: {e}")
+            return 1
