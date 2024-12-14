@@ -2,6 +2,7 @@ from network import Network
 from usb import Usb
 from can import CanTest
 import logging
+import os
 
 logging.basicConfig(
     level=logging.INFO,
@@ -26,18 +27,27 @@ def run_tests():
 
     if network_status == 0:
         logging.info("Network tests passed.")
+        os.system("echo 'Network tests passed.'")
     else:
         logging.error("Network tests failed.")
+        os.system("echo 'Network tests failed.'")
 
     if usb_status == 0:
         logging.info("USB tests passed.")
+        os.system("echo 'USB tests passed.'")
     else:
         logging.error("USB tests failed.")
+        os.system("echo 'USB tests failed.'")
 
     if can_status == 0:
         logging.info("CAN tests passed.")
+        os.system("echo 'CAN tests passed.'")
     else:
         logging.error("CAN tests failed.")
+        os.system("echo 'CAN tests failed.'")
+
+def exit_code():
+    return 0 if all(status == 0 for status in [network.ping(), usb.run(), can_test.test_channels()]) else 1
 
 if __name__ == "__main__":
     exit_code = run_tests()
