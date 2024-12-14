@@ -24,20 +24,16 @@ class CanTest:
         try:
             subprocess.run(command, shell=True, check=True)
             logging.info(f"send {can_frame} to {channel}")
-            subprocess.run(f"echo 'send {can_frame} to {channel}'", shell=True)
         except subprocess.CalledProcessError as e:
             logging.error(f"Error sending packet from {channel}: {e}")
-            subprocess.run(f"echo 'Error sending packet from {channel}: {e}'", shell=True)
 
     def receive_packet(self, channel):
         command = f"candump {channel} -n 1"
         try:
             output = subprocess.check_output(command, shell=True, stderr=subprocess.PIPE).decode()
             logging.info(f"{channel}: {output.strip()}")
-            subprocess.run(f"echo '{channel}: {output.strip()}'", shell=True)
         except subprocess.CalledProcessError as e:
             logging.error(f"Error receiving packet on {channel}: {e}")
-            subprocess.run(f"echo 'Error receiving packet on {channel}: {e}'", shell=True)
 
     def start_receiving(self):
         while True:
@@ -46,7 +42,6 @@ class CanTest:
     def test_channels(self):
         self.run_interfaces()
         logging.info(f"Testing packet transmission from {self.channel_0_name}...")
-        subprocess.run(f"echo 'Testing packet transmission from {self.channel_0_name}...'", shell=True)
 
         receive_thread = threading.Thread(target=self.start_receiving)
         receive_thread.daemon = True
@@ -63,9 +58,7 @@ class CanTest:
 
         if self.sent_packets == self.num_packets:
             logging.info(f"\n{self.channel_0_name} && {self.channel_1_name} OK\n")
-            subprocess.run(f"echo '{self.channel_0_name} && {self.channel_1_name} OK'", shell=True)
             return 0
         else:
             logging.error(f"\nError: The channels are not functioning correctly.\n")
-            subprocess.run(f"echo 'Error: The channels are not functioning correctly.'", shell=True)
             return 1

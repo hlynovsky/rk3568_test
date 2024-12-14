@@ -35,12 +35,10 @@ class Usb:
             subprocess.run(command, shell=True, check=True)
         except subprocess.CalledProcessError as e:
             logging.error(f"Command execution failed: {e}")
-            subprocess.run(f"echo 'Command execution failed: {e}'", shell=True)
             return 1
 
     def create_test_file(self):
         logging.debug("Creating a test file...")
-        subprocess.run(f"echo 'Creating a test file...'", shell=True)
         with open(self.TEST_FILE, 'wb') as f:
             f.write(os.urandom(self.TEST_FILE_SIZE))
 
@@ -49,7 +47,6 @@ class Usb:
         free_space = statvfs.f_bavail * statvfs.f_frsize
         if free_space < self.TEST_FILE_SIZE:
             logging.error(f"Not enough free space on {mount_point}")
-            subprocess.run(f"echo 'Not enough free space on {mount_point}'", shell=True)
             return 1
         return True
 
@@ -62,21 +59,17 @@ class Usb:
                     self.run_command(f'mkdir -p {path}')
                 except Exception as e:
                     logging.error(f"Failed to create mount point {path}: {e}")
-                    subprocess.run(f"echo 'Failed to create mount point {path}: {e}'", shell=True)
                     return 1
             
             if not os.path.exists(dev_path):
                 logging.error(f"Device {dev_path} does not exist")
-                subprocess.run(f"echo 'Device {dev_path} does not exist'", shell=True)
                 return 1
             
             try:
                 self.run_command(f'mount {dev_path} {path}')
                 logging.debug(f"Mounted {dev_path} to {path}")
-                subprocess.run(f"echo 'Mounted {dev_path} to {path}'", shell=True)
             except Exception as e:
                 logging.error(f"Failed to mount {dev_path} to {path}: {e}")
-                subprocess.run(f"echo 'Failed to mount {dev_path} to {path}: {e}'", shell=True)
                 return 1
         return 0
 
@@ -85,30 +78,24 @@ class Usb:
             try:
                 self.run_command(f'umount {path}')
                 logging.debug(f"Unmounted {path}")
-                subprocess.run(f"echo 'Unmounted {path}'", shell=True)
             except Exception:
                 logging.warning(f"Failed to unmount {path}")
-                subprocess.run(f"echo 'Failed to unmount {path}'", shell=True)
                 return 1
             if os.path.exists(path):
                 self.run_command(f'rmdir {path}')
-                subprocess.run(f"echo 'Removed directory {path}'", shell=True)
 
     def test_write_speed(self, mount_point):
         dest_path = os.path.join(mount_point, self.TEST_FILE)
         try:
             logging.debug("Testing write speed...")
-            subprocess.run(f"echo 'Testing write speed...'", shell=True)
             start_time = time.time()
             self.run_command(f'cp {self.TEST_FILE} {dest_path}')
             end_time = time.time()
             write_speed = self.TEST_FILE_SIZE / (end_time - start_time) / (1024 * 1024)
             logging.debug(f"Write speed: {write_speed:.2f} MB/s")
-            subprocess.run(f"echo 'Write speed: {write_speed:.2f} MB/s'", shell=True)
             return write_speed
         except Exception as e:
             logging.error(f"Write error: {e}")
-            subprocess.run(f"echo 'Write error: {e}'", shell=True)
             return 1
 
     def test_read_speed(self, mount_point):
@@ -116,20 +103,16 @@ class Usb:
         try:
             if not os.path.exists(source_path):
                 logging.error("File for read test not found!")
-                subprocess.run(f"echo 'File for read test not found!'", shell=True)
                 return 1
             logging.debug("Testing read speed...")
-            subprocess.run(f"echo 'Testing read speed...'", shell=True)
             start_time = time.time()
             self.run_command(f'cp {source_path} {self.READ_FILE}')
             end_time = time.time()
             read_speed = self.TEST_FILE_SIZE / (end_time - start_time) / (1024 * 1024)
             logging.debug(f"Read speed: {read_speed:.2f} MB/s")
-            subprocess.run(f"echo 'Read speed: {read_speed:.2f} MB/s'", shell=True)
             return read_speed
         except Exception as e:
             logging.error(f"Read error: {e}")
-            subprocess.run(f"echo 'Read error: {e}'", shell=True)
             return 1
 
     def clean_temp_files(self):
@@ -137,7 +120,6 @@ class Usb:
             if os.path.exists(file):
                 os.remove(file)
                 logging.debug(f"Temporary file removed: {file}")
-                subprocess.run(f"echo 'Temporary file removed: {file}'", shell=True)
             
     def run(self):
         try:
@@ -145,23 +127,18 @@ class Usb:
             status = self.mount_all()
             if status != 0:
                 logging.error("Mounting failed, stopping tests.")
-                subprocess.run(f"echo 'Mounting failed, stopping tests.'", shell=True)
                 return 1 
             for mount_point in self.usb_paths:
                 logging.debug(f"\nStarting test for {mount_point}")
-                subprocess.run(f"echo 'Starting test for {mount_point}'", shell=True)
                 write_speed = self.test_write_speed(mount_point)
                 read_speed = self.test_read_speed(mount_point)
                 logging.info(f"USB {mount_point} Write speed = {write_speed:.2f} MB/s OK | Read speed = {read_speed:.2f} MB/s OK")
-                subprocess.run(f"echo 'USB {mount_point} Write speed = {write_speed:.2f} MB/s OK | Read speed = {read_speed:.2f} MB/s OK'", shell=True)
                 dest_path = os.path.join(mount_point, self.TEST_FILE)
                 if os.path.exists(dest_path):
                     os.remove(dest_path)
                     logging.debug(f"File removed from {mount_point}")
-                    subprocess.run(f"echo 'File removed from {mount_point}'", shell=True)
             self.unmount_all()
             return 0
         except Exception as e:
             logging.error(f"An error occurred during the tests: {e}")
-            subprocess.run(f"echo 'An error occurred during the tests: {e}'", shell=True)
             return 1
