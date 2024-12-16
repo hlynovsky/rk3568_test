@@ -2,7 +2,6 @@ from network import Network
 from usb import Usb
 from can import CanTest
 import logging
-import os
 
 logging.basicConfig(
     level=logging.INFO,
