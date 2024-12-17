@@ -1,11 +1,13 @@
 from network import Network
 from usb import Usb
-from can import CanTest
+from can import Can
+from i2c import I2C
+from rtc import Rtc
+
 import logging
-import os
 
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.DEBUG,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
         logging.FileHandler('logs/test.log'),
@@ -18,31 +20,46 @@ usb_paths = ['/media/sda1']
 
 network = Network(network_interfaces)
 usb = Usb(usb_paths)
-can_test = CanTest("can0", "can1")
+i2c = I2C()
+can = Can("can0", "can1")
+rtc = Rtc()
 
-def run_tests():
+def main():
     network_status = network.ping()
     usb_status = usb.run()
-    can_status = can_test.test_channels()
+    can_status = can.test_channels()
+    i2c_status, eeprom_status = i2c.run()
+    rtc_status = rtc.read_rtc()
+
+    status_width = 10
 
     if network_status == 0:
-        logging.info("Network tests passed.")
+        logging.info(f"{'Network':<{status_width}} [OK]")
     else:
-        logging.error("Network tests failed.")
+        logging.error(f"{'Network':<{status_width}} failed")
 
     if usb_status == 0:
-        logging.info("USB tests passed.")
+        logging.info(f"{'USB':<{status_width}} [OK]")
     else:
-        logging.error("USB tests failed.")
+        logging.error(f"{'USB':<{status_width}} failed")
 
     if can_status == 0:
-        logging.info("CAN tests passed.")
+        logging.info(f"{'CAN':<{status_width}} [OK]")
     else:
-        logging.error("CAN tests failed.")
+        logging.error(f"{'CAN':<{status_width}} failed")
 
-def exit_code():
-    return 0 if all(status == 0 for status in [network.ping(), usb.run(), can_test.test_channels()]) else 1
+    if i2c_status == True:
+        logging.info(f"{'I2C':<{status_width}} [OK]")
+    else:
+        logging.error(f"{'I2C':<{status_width}} failed")
+    if eeprom_status == True:
+        logging.info(f"{'EEPROM':<{status_width}} [OK]")
+    else:
+        logging.error(f"{'EEPROM':<{status_width}} failed")
 
+    if rtc_status != None:
+        logging.info(f"{'RTC':<{status_width}} [OK]")
+    else:
+        logging.error(f"{'RTC':<{status_width}} failed")
 if __name__ == "__main__":
-    exit_code = run_tests()
-    exit(exit_code)
+    main()

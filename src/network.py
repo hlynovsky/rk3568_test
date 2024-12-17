@@ -4,14 +4,14 @@ import subprocess
 
 os.makedirs('logs', exist_ok=True)
 
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler('logs/test.log'),
-        logging.StreamHandler()
-    ]
-)
+# logging.basicConfig(
+#     level=logging.DEBUG,
+#     format='%(asctime)s - %(levelname)s - %(message)s',
+#     handlers=[
+#         logging.FileHandler('logs/test.log'),
+#         logging.StreamHandler()
+#     ]
+# )
 
 class Network:
 
@@ -25,7 +25,7 @@ class Network:
                 ip = subprocess.check_output(['ip', 'addr', 'show', interface]).decode('utf-8').split('inet ')[1].split('/')[0]
             except Exception as e:
                 logging.error(f"Error getting IP for {interface}: {e}")
-                logging.error(f"{interface} - not ok")
+                logging.error(f"{interface} - failed")
                 continue 
 
             try:
@@ -38,5 +38,5 @@ class Network:
                 logging.info(f"{interface} - ok")
                 return 0
             else:
-                logging.error(f"{interface} - not ok")
+                logging.error(f"{interface} - failed")
                 return 1

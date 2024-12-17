@@ -4,31 +4,23 @@ import logging
 import subprocess
 
 
+
+# logging.basicConfig(
+#     level=logging.DEBUG,
+#     format='%(asctime)s - %(levelname)s - %(message)s',
+#     handlers=[
+#         logging.FileHandler('logs/test.log'),
+#         logging.StreamHandler()
+#     ]
+# )
+
 class Usb:
     TEST_FILE_SIZE = 100 * 1024 * 1024  # 100MB
     TEST_FILE = 'test_file'
     READ_FILE = 'test_read_file'
 
-    def __init__(self, usb_paths, log_file='logs/test.log'):
+    def __init__(self, usb_paths):
         self.usb_paths = usb_paths
-        self.log_file = log_file
-        self.setup_logging()
-
-    def setup_logging(self):
-        for handler in logging.root.handlers[:]:
-            logging.root.removeHandler(handler)
-
-        logging.basicConfig(
-            level=logging.DEBUG,
-            format='%(asctime)s - %(levelname)s - %(message)s',
-            handlers=[logging.FileHandler(self.log_file)]
-        )
-        
-        console = logging.StreamHandler()
-        console.setLevel(logging.INFO)
-        console.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
-        
-        logging.getLogger().addHandler(console)
 
     def run_command(self, command):
         try:

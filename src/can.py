@@ -3,7 +3,16 @@ import subprocess
 import threading
 import logging
 
-class CanTest:
+# logging.basicConfig(
+#     level=logging.DEBUG,
+#     format='%(asctime)s - %(levelname)s - %(message)s',
+#     handlers=[
+#         logging.FileHandler('logs/test.log'),
+#         logging.StreamHandler()
+#     ]
+# )
+
+class Can:
     def __init__(self, channel_0_name, channel_1_name, num_packets=5):
         self.channel_0_name = channel_0_name
         self.channel_1_name = channel_1_name
@@ -12,8 +21,11 @@ class CanTest:
         self.received_packets = 0
 
     def run_interfaces(self):
-        subprocess.run(["sudo", "ip", "link", "set", "can0", "up", "type", "can", "bitrate", "500000"], check=True)
-        subprocess.run(["sudo", "ip", "link", "set", "can1", "up", "type", "can", "bitrate", "500000"], check=True)
+        try: 
+            subprocess.run(["sudo", "ip", "link", "set", "can0", "up", "type", "can", "bitrate", "500000"], check=True)
+            subprocess.run(["sudo", "ip", "link", "set", "can1", "up", "type", "can", "bitrate", "500000"], check=True)
+        except Exception as e:
+            logging.warning(f"Error setting up can0 or can1 to 500000 baudrate (Probably already configured): {e}")
 
     def send_packet(self, channel, data):
         self.sent_packets += 1
@@ -57,7 +69,6 @@ class CanTest:
         receive_thread.join(2)
 
         if self.sent_packets == self.num_packets:
-            logging.info(f"\n{self.channel_0_name} && {self.channel_1_name} OK\n")
             return 0
         else:
             logging.error(f"\nError: The channels are not functioning correctly.\n")
