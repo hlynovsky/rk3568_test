@@ -2207,3 +2207,853 @@ f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
 2024-12-17 12:13:10,525 - INFO - I2C        [OK]
 2024-12-17 12:13:10,525 - INFO - EEPROM     [OK]
 2024-12-17 12:13:10,526 - INFO - RTC        [OK]
+2024-12-17 12:48:06,562 - INFO - eth0 - ok
+2024-12-17 12:48:06,565 - DEBUG - Creating a test file...
+2024-12-17 12:48:07,122 - DEBUG - Mounted /dev/sda1 to /media/sda1
+2024-12-17 12:48:07,123 - DEBUG - 
+Starting test for /media/sda1
+2024-12-17 12:48:07,124 - DEBUG - Testing write speed...
+2024-12-17 12:48:14,593 - DEBUG - Write speed: 3.35 MB/s
+2024-12-17 12:48:14,595 - DEBUG - Testing read speed...
+2024-12-17 12:48:14,808 - DEBUG - Read speed: 117.86 MB/s
+2024-12-17 12:48:14,810 - INFO - USB /media/sda1 Write speed = 3.35 MB/s OK | Read speed = 117.86 MB/s OK
+2024-12-17 12:48:15,090 - DEBUG - File removed from /media/sda1
+2024-12-17 12:48:15,534 - DEBUG - Unmounted /media/sda1
+2024-12-17 12:48:16,193 - WARNING - Error setting up can0 or can1 to 500000 baudrate (Probably already configured): Command '['sudo', 'ip', 'link', 'set', 'can0', 'up', 'type', 'can', 'bitrate', '500000']' returned non-zero exit status 2.
+2024-12-17 12:48:16,194 - INFO - Testing packet transmission from can0...
+2024-12-17 12:48:17,206 - INFO - send 123#00 to can0
+2024-12-17 12:48:17,208 - INFO - can1: can1  123   [1]  00
+2024-12-17 12:48:17,714 - INFO - send 123#01 to can0
+2024-12-17 12:48:17,716 - INFO - can1: can1  123   [1]  01
+2024-12-17 12:48:18,284 - INFO - send 123#02 to can0
+2024-12-17 12:48:18,286 - INFO - can1: can1  123   [1]  02
+2024-12-17 12:48:18,794 - INFO - send 123#03 to can0
+2024-12-17 12:48:18,796 - INFO - can1: can1  123   [1]  03
+2024-12-17 12:48:19,304 - INFO - send 123#04 to can0
+2024-12-17 12:48:19,305 - INFO - can1: can1  123   [1]  04
+2024-12-17 12:48:21,986 - DEBUG - i2c devices are the same
+2024-12-17 12:48:21,987 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2024-12-17 12:48:21,988 - DEBUG - Example: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2024-12-17 12:48:21,990 - DEBUG - EEPROM is the same
+2024-12-17 12:48:21,992 - DEBUG - Current: 
+0 1 2 3 4 5 6 7 8 9 a b c d e f 0123456789abcdef
+00: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+10: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+20: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+30: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+40: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+50: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+60: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+70: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+80: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+90: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+a0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+b0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+c0: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+d0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+e0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+2024-12-17 12:48:21,993 - DEBUG - Example: 
+0 1 2 3 4 5 6 7 8 9 a b c d e f 0123456789abcdef
+00: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+10: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+20: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+30: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+40: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+50: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+60: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+70: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+80: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+90: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+a0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+b0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+c0: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+d0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+e0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+2024-12-17 12:48:23,130 - INFO - RTC time from /dev/rtc1: b'2017-08-04 10:48:30.337076+00:00\n'
+2024-12-17 12:48:23,131 - INFO - Network    [OK]
+2024-12-17 12:48:23,132 - INFO - USB        [OK]
+2024-12-17 12:48:23,133 - INFO - CAN        [OK]
+2024-12-17 12:48:23,134 - INFO - I2C        [OK]
+2024-12-17 12:48:23,135 - INFO - EEPROM     [OK]
+2024-12-17 12:48:23,136 - INFO - RTC        [OK]
+2024-12-17 12:48:30,538 - ERROR - Error receiving packet on can1: Command 'candump can1 -n 1' died with <Signals.SIGINT: 2>.
+2024-12-17 12:48:46,616 - INFO - eth0 - ok
+2024-12-17 12:48:46,617 - DEBUG - Creating a test file...
+2024-12-17 12:48:47,188 - DEBUG - Mounted /dev/sda1 to /media/sda1
+2024-12-17 12:48:47,190 - DEBUG - 
+Starting test for /media/sda1
+2024-12-17 12:48:47,191 - DEBUG - Testing write speed...
+2024-12-17 12:48:47,463 - DEBUG - Write speed: 92.30 MB/s
+2024-12-17 12:48:47,464 - DEBUG - Testing read speed...
+2024-12-17 12:48:47,777 - DEBUG - Read speed: 79.95 MB/s
+2024-12-17 12:48:47,778 - INFO - USB /media/sda1 Write speed = 92.30 MB/s OK | Read speed = 79.95 MB/s OK
+2024-12-17 12:48:47,842 - DEBUG - File removed from /media/sda1
+2024-12-17 12:48:48,257 - DEBUG - Unmounted /media/sda1
+2024-12-17 12:48:48,505 - WARNING - Error setting up can0 or can1 to 500000 baudrate (Probably already configured): Command '['sudo', 'ip', 'link', 'set', 'can0', 'up', 'type', 'can', 'bitrate', '500000']' returned non-zero exit status 2.
+2024-12-17 12:48:48,506 - INFO - Testing packet transmission from can0...
+2024-12-17 12:48:49,516 - INFO - send 123#00 to can0
+2024-12-17 12:48:49,518 - INFO - can1: can1  123   [1]  00
+2024-12-17 12:48:51,245 - INFO - send 123#01 to can0
+2024-12-17 12:48:51,246 - INFO - can1: can1  123   [1]  01
+2024-12-17 12:48:51,754 - INFO - send 123#02 to can0
+2024-12-17 12:48:51,755 - INFO - can1: can1  123   [1]  02
+2024-12-17 12:48:52,263 - INFO - send 123#03 to can0
+2024-12-17 12:48:52,265 - INFO - can1: can1  123   [1]  03
+2024-12-17 12:48:52,772 - INFO - send 123#04 to can0
+2024-12-17 12:48:52,773 - INFO - can1: can1  123   [1]  04
+2024-12-17 12:48:55,417 - DEBUG - i2c devices are the same
+2024-12-17 12:48:55,418 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2024-12-17 12:48:55,419 - DEBUG - Example: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2024-12-17 12:48:55,420 - DEBUG - EEPROM is the same
+2024-12-17 12:48:55,422 - DEBUG - Current: 
+0 1 2 3 4 5 6 7 8 9 a b c d e f 0123456789abcdef
+00: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+10: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+20: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+30: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+40: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+50: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+60: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+70: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+80: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+90: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+a0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+b0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+c0: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+d0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+e0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+2024-12-17 12:48:55,423 - DEBUG - Example: 
+0 1 2 3 4 5 6 7 8 9 a b c d e f 0123456789abcdef
+00: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+10: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+20: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+30: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+40: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+50: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+60: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+70: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+80: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+90: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+a0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+b0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+c0: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+d0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+e0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+2024-12-17 12:48:56,438 - INFO - RTC time from /dev/rtc1: b'2017-08-04 10:49:00.198506+00:00\n'
+2024-12-17 12:48:56,440 - INFO - Network    [OK]
+2024-12-17 12:48:56,441 - INFO - USB        [OK]
+2024-12-17 12:48:56,442 - INFO - CAN        [OK]
+2024-12-17 12:48:56,443 - INFO - I2C        [OK]
+2024-12-17 12:48:56,444 - INFO - EEPROM     [OK]
+2024-12-17 12:48:56,445 - INFO - RTC        [OK]
+                                                                                                                             2024-12-17 13:13:06,881 - INFO - eth0 - ok
+2024-12-17 13:13:06,884 - DEBUG - Creating a test file...
+2024-12-17 13:13:07,462 - DEBUG - Mounted /dev/sda1 to /media/sda1
+2024-12-17 13:13:07,463 - DEBUG - 
+Starting test for /media/sda1
+2024-12-17 13:13:07,464 - DEBUG - Testing write speed...
+2024-12-17 13:13:07,733 - DEBUG - Write speed: 93.13 MB/s
+2024-12-17 13:13:07,734 - DEBUG - Testing read speed...
+2024-12-17 13:13:08,448 - DEBUG - Read speed: 35.03 MB/s
+2024-12-17 13:13:08,449 - INFO - USB /media/sda1 Write speed = 93.13 MB/s OK | Read speed = 35.03 MB/s OK
+2024-12-17 13:13:08,518 - DEBUG - File removed from /media/sda1
+2024-12-17 13:13:08,943 - DEBUG - Unmounted /media/sda1
+2024-12-17 13:13:09,196 - WARNING - Error setting up can0 or can1 to 500000 baudrate (Probably already configured): Command '['sudo', 'ip', 'link', 'set', 'can0', 'up', 'type', 'can', 'bitrate', '500000']' returned non-zero exit status 2.
+2024-12-17 13:13:09,197 - INFO - Testing packet transmission from can0...
+2024-12-17 13:13:10,208 - INFO - send 123#00 to can0
+2024-12-17 13:13:10,209 - INFO - can1: can1  123   [1]  00
+2024-12-17 13:13:10,718 - INFO - send 123#01 to can0
+2024-12-17 13:13:10,720 - INFO - can1: can1  123   [1]  01
+2024-12-17 13:13:11,229 - INFO - send 123#02 to can0
+2024-12-17 13:13:11,231 - INFO - can1: can1  123   [1]  02
+2024-12-17 13:13:11,739 - INFO - send 123#03 to can0
+2024-12-17 13:13:11,741 - INFO - can1: can1  123   [1]  03
+2024-12-17 13:13:12,249 - INFO - send 123#04 to can0
+2024-12-17 13:13:12,251 - INFO - can1: can1  123   [1]  04
+2024-12-17 13:13:14,906 - DEBUG - i2c devices are the same
+2024-12-17 13:13:14,907 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2024-12-17 13:13:14,908 - DEBUG - Example: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2024-12-17 13:13:14,910 - DEBUG - EEPROM is the same
+2024-12-17 13:13:14,912 - DEBUG - Current: 
+0 1 2 3 4 5 6 7 8 9 a b c d e f 0123456789abcdef
+00: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+10: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+20: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+30: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+40: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+50: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+60: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+70: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+80: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+90: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+a0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+b0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+c0: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+d0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+e0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+2024-12-17 13:13:14,913 - DEBUG - Example: 
+0 1 2 3 4 5 6 7 8 9 a b c d e f 0123456789abcdef
+00: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+10: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+20: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+30: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+40: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+50: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+60: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+70: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+80: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+90: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+a0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+b0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+c0: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+d0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+e0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+2024-12-17 13:13:15,855 - INFO - RTC time from /dev/rtc1: b'2017-08-04 11:10:55.304434+00:00\n'
+2024-12-17 13:13:15,856 - INFO - Network    [OK]
+2024-12-17 13:13:15,857 - INFO - USB        [OK]
+2024-12-17 13:13:15,858 - INFO - CAN        [OK]
+2024-12-17 13:13:15,859 - INFO - I2C        [OK]
+2024-12-17 13:13:15,859 - INFO - EEPROM     [OK]
+2024-12-17 13:13:15,860 - INFO - RTC        [OK]
+2024-12-17 13:13:15,874 - INFO - Watchdog   [OK]
+2024-12-17 13:14:19,681 - INFO - eth0 - ok
+2024-12-17 13:14:19,682 - DEBUG - Creating a test file...
+2024-12-17 13:14:20,251 - DEBUG - Mounted /dev/sda1 to /media/sda1
+2024-12-17 13:14:20,252 - DEBUG - 
+Starting test for /media/sda1
+2024-12-17 13:14:20,254 - DEBUG - Testing write speed...
+2024-12-17 13:14:44,815 - DEBUG - Write speed: 1.02 MB/s
+2024-12-17 13:14:44,816 - DEBUG - Testing read speed...
+2024-12-17 13:14:45,009 - DEBUG - Read speed: 130.06 MB/s
+2024-12-17 13:14:45,010 - INFO - USB /media/sda1 Write speed = 1.02 MB/s OK | Read speed = 130.06 MB/s OK
+2024-12-17 13:14:45,071 - DEBUG - File removed from /media/sda1
+2024-12-17 13:14:45,265 - DEBUG - Unmounted /media/sda1
+2024-12-17 13:14:45,489 - WARNING - Error setting up can0 or can1 to 500000 baudrate (Probably already configured): Command '['sudo', 'ip', 'link', 'set', 'can0', 'up', 'type', 'can', 'bitrate', '500000']' returned non-zero exit status 2.
+2024-12-17 13:14:45,491 - INFO - Testing packet transmission from can0...
+2024-12-17 13:14:46,501 - INFO - send 123#00 to can0
+2024-12-17 13:14:46,503 - INFO - can1: can1  123   [1]  00
+2024-12-17 13:14:47,010 - INFO - send 123#01 to can0
+2024-12-17 13:14:47,012 - INFO - can1: can1  123   [1]  01
+2024-12-17 13:14:47,519 - INFO - send 123#02 to can0
+2024-12-17 13:14:47,521 - INFO - can1: can1  123   [1]  02
+2024-12-17 13:14:48,046 - INFO - send 123#03 to can0
+2024-12-17 13:14:48,051 - INFO - can1: can1  123   [1]  03
+2024-12-17 13:14:48,570 - INFO - send 123#04 to can0
+2024-12-17 13:14:48,575 - INFO - can1: can1  123   [1]  04
+2024-12-17 13:14:51,212 - DEBUG - i2c devices are the same
+2024-12-17 13:14:51,213 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2024-12-17 13:14:51,217 - DEBUG - Example: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2024-12-17 13:14:51,218 - DEBUG - EEPROM is the same
+2024-12-17 13:14:51,220 - DEBUG - Current: 
+0 1 2 3 4 5 6 7 8 9 a b c d e f 0123456789abcdef
+00: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+10: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+20: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+30: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+40: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+50: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+60: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+70: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+80: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+90: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+a0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+b0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+c0: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+d0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+e0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+2024-12-17 13:14:51,222 - DEBUG - Example: 
+0 1 2 3 4 5 6 7 8 9 a b c d e f 0123456789abcdef
+00: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+10: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+20: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+30: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+40: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+50: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+60: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+70: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+80: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+90: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+a0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+b0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+c0: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+d0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+e0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+2024-12-17 13:14:52,255 - INFO - RTC time from /dev/rtc1: b'2017-08-04 11:12:22.172959+00:00\n'
+2024-12-17 13:14:52,265 - INFO - Watchdog status: 
+2024-12-17 13:14:52,266 - INFO - Network    [OK]
+2024-12-17 13:14:52,266 - INFO - USB        [OK]
+2024-12-17 13:14:52,267 - INFO - CAN        [OK]
+2024-12-17 13:14:52,268 - INFO - I2C        [OK]
+2024-12-17 13:14:52,268 - INFO - EEPROM     [OK]
+2024-12-17 13:14:52,269 - INFO - RTC        [OK]
+2024-12-17 13:14:52,270 - INFO - Watchdog   [OK]
+2024-12-17 13:18:33,872 - INFO - eth0 - ok
+2024-12-17 13:18:33,876 - DEBUG - Creating a test file...
+2024-12-17 13:18:34,474 - DEBUG - Mounted /dev/sda1 to /media/sda1
+2024-12-17 13:18:34,475 - DEBUG - 
+Starting test for /media/sda1
+2024-12-17 13:18:34,476 - DEBUG - Testing write speed...
+2024-12-17 13:18:34,749 - DEBUG - Write speed: 92.11 MB/s
+2024-12-17 13:18:34,749 - DEBUG - Testing read speed...
+2024-12-17 13:18:34,943 - DEBUG - Read speed: 130.00 MB/s
+2024-12-17 13:18:34,944 - INFO - USB /media/sda1 Write speed = 92.11 MB/s OK | Read speed = 130.00 MB/s OK
+2024-12-17 13:18:35,008 - DEBUG - File removed from /media/sda1
+2024-12-17 13:18:35,427 - DEBUG - Unmounted /media/sda1
+2024-12-17 13:18:35,634 - WARNING - Error setting up can0 or can1 to 500000 baudrate (Probably already configured): Command '['sudo', 'ip', 'link', 'set', 'can0', 'up', 'type', 'can', 'bitrate', '500000']' returned non-zero exit status 2.
+2024-12-17 13:18:35,635 - INFO - Testing packet transmission from can0...
+2024-12-17 13:18:36,647 - INFO - send 123#00 to can0
+2024-12-17 13:18:36,649 - INFO - can1: can1  123   [1]  00
+2024-12-17 13:18:37,156 - INFO - send 123#01 to can0
+2024-12-17 13:18:37,158 - INFO - can1: can1  123   [1]  01
+2024-12-17 13:18:37,665 - INFO - send 123#02 to can0
+2024-12-17 13:18:37,667 - INFO - can1: can1  123   [1]  02
+2024-12-17 13:18:38,176 - INFO - send 123#03 to can0
+2024-12-17 13:18:38,177 - INFO - can1: can1  123   [1]  03
+2024-12-17 13:18:38,689 - INFO - send 123#04 to can0
+2024-12-17 13:18:38,691 - INFO - can1: can1  123   [1]  04
+2024-12-17 13:18:41,335 - DEBUG - i2c devices are the same
+2024-12-17 13:18:41,336 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2024-12-17 13:18:41,337 - DEBUG - Example: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2024-12-17 13:18:41,339 - DEBUG - EEPROM is the same
+2024-12-17 13:18:41,340 - DEBUG - Current: 
+0 1 2 3 4 5 6 7 8 9 a b c d e f 0123456789abcdef
+00: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+10: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+20: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+30: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+40: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+50: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+60: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+70: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+80: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+90: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+a0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+b0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+c0: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+d0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+e0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+2024-12-17 13:18:41,341 - DEBUG - Example: 
+0 1 2 3 4 5 6 7 8 9 a b c d e f 0123456789abcdef
+00: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+10: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+20: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+30: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+40: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+50: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+60: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+70: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+80: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+90: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+a0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+b0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+c0: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+d0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+e0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+2024-12-17 13:18:41,764 - INFO - RTC time from /dev/rtc1: b'2017-08-04 11:15:49.773472+00:00\n'
+2024-12-17 13:18:41,982 - INFO - Watchdog status: 
+2024-12-17 13:18:41,983 - INFO - Network    [OK]
+2024-12-17 13:18:41,984 - INFO - USB        [OK]
+2024-12-17 13:18:41,984 - INFO - CAN        [OK]
+2024-12-17 13:18:41,985 - INFO - I2C        [OK]
+2024-12-17 13:18:41,985 - INFO - EEPROM     [OK]
+2024-12-17 13:18:41,986 - INFO - RTC        [OK]
+2024-12-17 13:18:41,987 - INFO - Watchdog   [OK]
+2024-12-17 13:19:29,895 - INFO - eth0 - ok
+2024-12-17 13:19:29,896 - DEBUG - Creating a test file...
+2024-12-17 13:19:30,471 - DEBUG - Mounted /dev/sda1 to /media/sda1
+2024-12-17 13:19:30,473 - DEBUG - 
+Starting test for /media/sda1
+2024-12-17 13:19:30,474 - DEBUG - Testing write speed...
+2024-12-17 13:19:30,747 - DEBUG - Write speed: 91.85 MB/s
+2024-12-17 13:19:30,748 - DEBUG - Testing read speed...
+2024-12-17 13:19:30,944 - DEBUG - Read speed: 128.15 MB/s
+2024-12-17 13:19:30,945 - INFO - USB /media/sda1 Write speed = 91.85 MB/s OK | Read speed = 128.15 MB/s OK
+2024-12-17 13:19:31,010 - DEBUG - File removed from /media/sda1
+2024-12-17 13:19:31,425 - DEBUG - Unmounted /media/sda1
+2024-12-17 13:19:31,632 - WARNING - Error setting up can0 or can1 to 500000 baudrate (Probably already configured): Command '['sudo', 'ip', 'link', 'set', 'can0', 'up', 'type', 'can', 'bitrate', '500000']' returned non-zero exit status 2.
+2024-12-17 13:19:31,633 - INFO - Testing packet transmission from can0...
+2024-12-17 13:19:32,645 - INFO - send 123#00 to can0
+2024-12-17 13:19:32,646 - INFO - can1: can1  123   [1]  00
+2024-12-17 13:19:33,154 - INFO - send 123#01 to can0
+2024-12-17 13:19:33,156 - INFO - can1: can1  123   [1]  01
+2024-12-17 13:19:33,663 - INFO - send 123#02 to can0
+2024-12-17 13:19:33,665 - INFO - can1: can1  123   [1]  02
+2024-12-17 13:19:34,174 - INFO - send 123#03 to can0
+2024-12-17 13:19:34,176 - INFO - can1: can1  123   [1]  03
+2024-12-17 13:19:34,683 - INFO - send 123#04 to can0
+2024-12-17 13:19:34,685 - INFO - can1: can1  123   [1]  04
+2024-12-17 13:19:37,326 - DEBUG - i2c devices are the same
+2024-12-17 13:19:37,327 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2024-12-17 13:19:37,328 - DEBUG - Example: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2024-12-17 13:19:37,330 - DEBUG - EEPROM is the same
+2024-12-17 13:19:37,331 - DEBUG - Current: 
+0 1 2 3 4 5 6 7 8 9 a b c d e f 0123456789abcdef
+00: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+10: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+20: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+30: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+40: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+50: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+60: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+70: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+80: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+90: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+a0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+b0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+c0: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+d0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+e0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+2024-12-17 13:19:37,332 - DEBUG - Example: 
+0 1 2 3 4 5 6 7 8 9 a b c d e f 0123456789abcdef
+00: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+10: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+20: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+30: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+40: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+50: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+60: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+70: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+80: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+90: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+a0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+b0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+c0: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+d0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+e0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+2024-12-17 13:19:38,323 - INFO - RTC time from /dev/rtc1: b'2017-08-04 11:16:40.245620+00:00\n'
+2024-12-17 13:19:38,332 - ERROR - Error: Watchdog device not found.
+2024-12-17 13:19:38,333 - INFO - Network    [OK]
+2024-12-17 13:19:38,334 - INFO - USB        [OK]
+2024-12-17 13:19:38,335 - INFO - CAN        [OK]
+2024-12-17 13:19:38,335 - INFO - I2C        [OK]
+2024-12-17 13:19:38,336 - INFO - EEPROM     [OK]
+2024-12-17 13:19:38,337 - INFO - RTC        [OK]
+2024-12-17 13:19:38,338 - INFO - Watchdog   [OK]
+2024-12-17 13:21:21,601 - INFO - eth0 - ok
+2024-12-17 13:21:21,602 - DEBUG - Creating a test file...
+2024-12-17 13:21:22,180 - DEBUG - Mounted /dev/sda1 to /media/sda1
+2024-12-17 13:21:22,181 - DEBUG - 
+Starting test for /media/sda1
+2024-12-17 13:21:22,182 - DEBUG - Testing write speed...
+2024-12-17 13:21:22,456 - DEBUG - Write speed: 91.21 MB/s
+2024-12-17 13:21:22,457 - DEBUG - Testing read speed...
+2024-12-17 13:21:22,660 - DEBUG - Read speed: 123.70 MB/s
+2024-12-17 13:21:22,661 - INFO - USB /media/sda1 Write speed = 91.21 MB/s OK | Read speed = 123.70 MB/s OK
+2024-12-17 13:21:22,724 - DEBUG - File removed from /media/sda1
+2024-12-17 13:21:23,141 - DEBUG - Unmounted /media/sda1
+2024-12-17 13:21:23,373 - WARNING - Error setting up can0 or can1 to 500000 baudrate (Probably already configured): Command '['sudo', 'ip', 'link', 'set', 'can0', 'up', 'type', 'can', 'bitrate', '500000']' returned non-zero exit status 2.
+2024-12-17 13:21:23,374 - INFO - Testing packet transmission from can0...
+2024-12-17 13:21:24,386 - INFO - can1: can1  123   [1]  00
+2024-12-17 13:21:24,387 - INFO - send 123#00 to can0
+2024-12-17 13:21:24,897 - INFO - send 123#01 to can0
+2024-12-17 13:21:24,899 - INFO - can1: can1  123   [1]  01
+2024-12-17 13:21:25,406 - INFO - send 123#02 to can0
+2024-12-17 13:21:25,408 - INFO - can1: can1  123   [1]  02
+2024-12-17 13:21:25,915 - INFO - send 123#03 to can0
+2024-12-17 13:21:25,917 - INFO - can1: can1  123   [1]  03
+2024-12-17 13:21:26,425 - INFO - send 123#04 to can0
+2024-12-17 13:21:26,426 - INFO - can1: can1  123   [1]  04
+2024-12-17 13:21:29,073 - DEBUG - i2c devices are the same
+2024-12-17 13:21:29,074 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2024-12-17 13:21:29,075 - DEBUG - Example: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2024-12-17 13:21:29,076 - DEBUG - EEPROM is the same
+2024-12-17 13:21:29,078 - DEBUG - Current: 
+0 1 2 3 4 5 6 7 8 9 a b c d e f 0123456789abcdef
+00: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+10: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+20: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+30: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+40: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+50: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+60: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+70: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+80: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+90: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+a0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+b0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+c0: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+d0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+e0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+2024-12-17 13:21:29,079 - DEBUG - Example: 
+0 1 2 3 4 5 6 7 8 9 a b c d e f 0123456789abcdef
+00: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+10: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+20: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+30: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+40: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+50: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+60: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+70: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+80: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+90: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+a0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+b0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+c0: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+d0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+e0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+2024-12-17 13:21:30,326 - INFO - RTC time from /dev/rtc1: b'2017-08-04 11:18:21.059301+00:00\n'
+2024-12-17 13:21:30,335 - INFO - Watchdog status: 
+2024-12-17 13:21:30,336 - INFO - Network    [OK]
+2024-12-17 13:21:30,337 - INFO - USB        [OK]
+2024-12-17 13:21:30,338 - INFO - CAN        [OK]
+2024-12-17 13:21:30,338 - INFO - I2C        [OK]
+2024-12-17 13:21:30,339 - INFO - EEPROM     [OK]
+2024-12-17 13:21:30,339 - INFO - RTC        [OK]
+2024-12-17 13:21:30,340 - ERROR - Watchdog   failed
+2024-12-17 13:22:45,389 - INFO - eth0 - ok
+2024-12-17 13:22:45,391 - DEBUG - Creating a test file...
+2024-12-17 13:22:46,037 - DEBUG - Mounted /dev/sda1 to /media/sda1
+2024-12-17 13:22:46,038 - DEBUG - 
+Starting test for /media/sda1
+2024-12-17 13:22:46,039 - DEBUG - Testing write speed...
+2024-12-17 13:22:46,312 - DEBUG - Write speed: 91.79 MB/s
+2024-12-17 13:22:46,313 - DEBUG - Testing read speed...
+2024-12-17 13:22:47,257 - DEBUG - Read speed: 26.51 MB/s
+2024-12-17 13:22:47,258 - INFO - USB /media/sda1 Write speed = 91.79 MB/s OK | Read speed = 26.51 MB/s OK
+2024-12-17 13:22:47,321 - DEBUG - File removed from /media/sda1
+2024-12-17 13:22:47,735 - DEBUG - Unmounted /media/sda1
+2024-12-17 13:22:47,983 - WARNING - Error setting up can0 or can1 to 500000 baudrate (Probably already configured): Command '['sudo', 'ip', 'link', 'set', 'can0', 'up', 'type', 'can', 'bitrate', '500000']' returned non-zero exit status 2.
+2024-12-17 13:22:47,984 - INFO - Testing packet transmission from can0...
+2024-12-17 13:22:48,994 - INFO - send 123#00 to can0
+2024-12-17 13:22:48,996 - INFO - can1: can1  123   [1]  00
+2024-12-17 13:22:49,505 - INFO - send 123#01 to can0
+2024-12-17 13:22:49,506 - INFO - can1: can1  123   [1]  01
+2024-12-17 13:22:50,032 - INFO - send 123#02 to can0
+2024-12-17 13:22:50,037 - INFO - can1: can1  123   [1]  02
+2024-12-17 13:22:50,560 - INFO - send 123#03 to can0
+2024-12-17 13:22:50,565 - INFO - can1: can1  123   [1]  03
+2024-12-17 13:22:51,083 - INFO - send 123#04 to can0
+2024-12-17 13:22:51,087 - INFO - can1: can1  123   [1]  04
+2024-12-17 13:22:53,729 - DEBUG - i2c devices are the same
+2024-12-17 13:22:53,730 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2024-12-17 13:22:53,731 - DEBUG - Example: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2024-12-17 13:22:53,733 - DEBUG - EEPROM is the same
+2024-12-17 13:22:53,734 - DEBUG - Current: 
+0 1 2 3 4 5 6 7 8 9 a b c d e f 0123456789abcdef
+00: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+10: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+20: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+30: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+40: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+50: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+60: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+70: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+80: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+90: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+a0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+b0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+c0: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+d0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+e0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+2024-12-17 13:22:53,735 - DEBUG - Example: 
+0 1 2 3 4 5 6 7 8 9 a b c d e f 0123456789abcdef
+00: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+10: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+20: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+30: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+40: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+50: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+60: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+70: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+80: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+90: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+a0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+b0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+c0: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+d0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+e0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+2024-12-17 13:22:54,611 - INFO - RTC time from /dev/rtc1: b'2017-08-04 11:19:37.338632+00:00\n'
+2024-12-17 13:22:54,621 - INFO - Watchdog status: /dev/watchdog
+
+2024-12-17 13:22:54,622 - INFO - Network    [OK]
+2024-12-17 13:22:54,623 - INFO - USB        [OK]
+2024-12-17 13:22:54,624 - INFO - CAN        [OK]
+2024-12-17 13:22:54,625 - INFO - I2C        [OK]
+2024-12-17 13:22:54,625 - INFO - EEPROM     [OK]
+2024-12-17 13:22:54,626 - INFO - RTC        [OK]
+2024-12-17 13:22:54,627 - INFO - Watchdog   [OK]
+2024-12-17 13:24:10,616 - INFO - eth0 - ok
+2024-12-17 13:24:10,618 - DEBUG - Creating a test file...
+2024-12-17 13:24:11,265 - DEBUG - Mounted /dev/sda1 to /media/sda1
+2024-12-17 13:24:11,267 - DEBUG - 
+Starting test for /media/sda1
+2024-12-17 13:24:11,267 - DEBUG - Testing write speed...
+2024-12-17 13:24:11,543 - DEBUG - Write speed: 90.84 MB/s
+2024-12-17 13:24:11,544 - DEBUG - Testing read speed...
+2024-12-17 13:24:12,246 - DEBUG - Read speed: 35.68 MB/s
+2024-12-17 13:24:12,247 - INFO - USB /media/sda1 Write speed = 90.84 MB/s OK | Read speed = 35.68 MB/s OK
+2024-12-17 13:24:12,309 - DEBUG - File removed from /media/sda1
+2024-12-17 13:24:12,733 - DEBUG - Unmounted /media/sda1
+2024-12-17 13:24:12,981 - WARNING - Error setting up can0 or can1 to 500000 baudrate (Probably already configured): Command '['sudo', 'ip', 'link', 'set', 'can0', 'up', 'type', 'can', 'bitrate', '500000']' returned non-zero exit status 2.
+2024-12-17 13:24:12,982 - INFO - Testing packet transmission from can0...
+2024-12-17 13:24:13,993 - INFO - send 123#00 to can0
+2024-12-17 13:24:13,994 - INFO - can1: can1  123   [1]  00
+2024-12-17 13:24:14,502 - INFO - send 123#01 to can0
+2024-12-17 13:24:14,503 - INFO - can1: can1  123   [1]  01
+2024-12-17 13:24:15,017 - INFO - send 123#02 to can0
+2024-12-17 13:24:15,020 - INFO - can1: can1  123   [1]  02
+2024-12-17 13:24:15,537 - INFO - send 123#03 to can0
+2024-12-17 13:24:15,540 - INFO - can1: can1  123   [1]  03
+2024-12-17 13:24:16,047 - INFO - send 123#04 to can0
+2024-12-17 13:24:16,048 - INFO - can1: can1  123   [1]  04
+2024-12-17 13:24:18,777 - DEBUG - i2c devices are the same
+2024-12-17 13:24:18,778 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2024-12-17 13:24:18,779 - DEBUG - Example: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2024-12-17 13:24:18,781 - DEBUG - EEPROM is the same
+2024-12-17 13:24:18,782 - DEBUG - Current: 
+0 1 2 3 4 5 6 7 8 9 a b c d e f 0123456789abcdef
+00: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+10: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+20: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+30: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+40: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+50: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+60: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+70: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+80: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+90: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+a0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+b0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+c0: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+d0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+e0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+2024-12-17 13:24:18,783 - DEBUG - Example: 
+0 1 2 3 4 5 6 7 8 9 a b c d e f 0123456789abcdef
+00: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+10: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+20: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+30: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+40: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+50: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+60: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+70: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+80: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+90: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+a0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+b0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+c0: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+d0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+e0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+2024-12-17 13:24:19,990 - INFO - RTC time from /dev/rtc1: b'2017-08-04 11:20:54.012436+00:00\n'
+2024-12-17 13:24:20,006 - INFO - Watchdog status: /dev/watchdog
+, /dev/watchdog
+
+2024-12-17 13:24:20,007 - INFO - Network    [OK]
+2024-12-17 13:24:20,008 - INFO - USB        [OK]
+2024-12-17 13:24:20,008 - INFO - CAN        [OK]
+2024-12-17 13:24:20,009 - INFO - I2C        [OK]
+2024-12-17 13:24:20,009 - INFO - EEPROM     [OK]
+2024-12-17 13:24:20,010 - INFO - RTC        [OK]
+2024-12-17 13:24:20,011 - INFO - Watchdog   [OK]
+2024-12-17 13:24:43,897 - INFO - eth0 - ok
+2024-12-17 13:24:43,899 - DEBUG - Creating a test file...
+2024-12-17 13:24:44,542 - DEBUG - Mounted /dev/sda1 to /media/sda1
+2024-12-17 13:24:44,543 - DEBUG - 
+Starting test for /media/sda1
+2024-12-17 13:24:44,543 - DEBUG - Testing write speed...
+2024-12-17 13:24:44,816 - DEBUG - Write speed: 91.87 MB/s
+2024-12-17 13:24:44,818 - DEBUG - Testing read speed...
+2024-12-17 13:24:45,018 - DEBUG - Read speed: 125.29 MB/s
+2024-12-17 13:24:45,019 - INFO - USB /media/sda1 Write speed = 91.87 MB/s OK | Read speed = 125.29 MB/s OK
+2024-12-17 13:24:45,083 - DEBUG - File removed from /media/sda1
+2024-12-17 13:24:45,502 - DEBUG - Unmounted /media/sda1
+2024-12-17 13:24:46,546 - WARNING - Error setting up can0 or can1 to 500000 baudrate (Probably already configured): Command '['sudo', 'ip', 'link', 'set', 'can0', 'up', 'type', 'can', 'bitrate', '500000']' returned non-zero exit status 2.
+2024-12-17 13:24:46,547 - INFO - Testing packet transmission from can0...
+2024-12-17 13:24:47,557 - INFO - send 123#00 to can0
+2024-12-17 13:24:47,559 - INFO - can1: can1  123   [1]  00
+2024-12-17 13:24:48,066 - INFO - send 123#01 to can0
+2024-12-17 13:24:48,068 - INFO - can1: can1  123   [1]  01
+2024-12-17 13:24:48,575 - INFO - send 123#02 to can0
+2024-12-17 13:24:48,577 - INFO - can1: can1  123   [1]  02
+2024-12-17 13:24:49,084 - INFO - send 123#03 to can0
+2024-12-17 13:24:49,086 - INFO - can1: can1  123   [1]  03
+2024-12-17 13:24:49,593 - INFO - send 123#04 to can0
+2024-12-17 13:24:49,595 - INFO - can1: can1  123   [1]  04
+2024-12-17 13:24:52,297 - DEBUG - i2c devices are the same
+2024-12-17 13:24:52,298 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2024-12-17 13:24:52,302 - DEBUG - Example: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2024-12-17 13:24:52,304 - DEBUG - EEPROM is the same
+2024-12-17 13:24:52,305 - DEBUG - Current: 
+0 1 2 3 4 5 6 7 8 9 a b c d e f 0123456789abcdef
+00: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+10: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+20: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+30: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+40: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+50: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+60: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+70: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+80: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+90: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+a0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+b0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+c0: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+d0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+e0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+2024-12-17 13:24:52,307 - DEBUG - Example: 
+0 1 2 3 4 5 6 7 8 9 a b c d e f 0123456789abcdef
+00: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+10: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+20: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+30: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+40: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+50: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+60: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+70: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+80: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+90: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+a0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+b0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+c0: 28 ac 80 80 01 80 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b (?????++++++++++
+d0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+e0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+f0: 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b 2b ++++++++++++++++
+2024-12-17 13:24:53,248 - INFO - RTC time from /dev/rtc1: b'2017-08-04 11:21:24.256799+00:00\n'
+2024-12-17 13:24:53,266 - INFO - Watchdog status: /dev/watchdog
+, 
+2024-12-17 13:24:53,267 - INFO - Network    [OK]
+2024-12-17 13:24:53,268 - INFO - USB        [OK]
+2024-12-17 13:24:53,269 - INFO - CAN        [OK]
+2024-12-17 13:24:53,269 - INFO - I2C        [OK]
+2024-12-17 13:24:53,270 - INFO - EEPROM     [OK]
+2024-12-17 13:24:53,271 - INFO - RTC        [OK]
+2024-12-17 13:24:53,272 - ERROR - Watchdog   failed

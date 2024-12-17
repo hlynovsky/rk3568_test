@@ -5,6 +5,7 @@ from i2c import I2C
 from rtc import Rtc
 
 import logging
+import subprocess
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -30,8 +31,12 @@ def main():
     can_status = can.test_channels()
     i2c_status, eeprom_status = i2c.run()
     rtc_status = rtc.read_rtc()
+    wd_status = subprocess.run(["ls", "/dev/watchdog"], capture_output=True, text=True)
+    logging.info(f"Watchdog status: {wd_status.stdout}")
 
     status_width = 10
+    print("Results")
+    print("=" * 50)
 
     if network_status == 0:
         logging.info(f"{'Network':<{status_width}} [OK]")
@@ -61,5 +66,14 @@ def main():
         logging.info(f"{'RTC':<{status_width}} [OK]")
     else:
         logging.error(f"{'RTC':<{status_width}} failed")
+
+    if wd_status.returncode == 0:
+        logging.info(f"{'Watchdog':<{status_width}} [OK]")
+    else:
+        logging.error(f"{'Watchdog':<{status_width}} failed")
+
+    print("=" * 50)
+
+        
 if __name__ == "__main__":
     main()

@@ -15,7 +15,7 @@ import subprocess
 # )
 
 class Usb:
-    TEST_FILE_SIZE = 100 * 1024 * 1024  # 100MB
+    TEST_FILE_SIZE = 25 * 1024 * 1024  # 25MB
     TEST_FILE = 'test_file'
     READ_FILE = 'test_read_file'
 
