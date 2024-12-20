@@ -61,14 +61,12 @@ def test_watchdog():
     logging.info("Watchdog activated")
     logging.info("System will reboot in 30 seconds...")
 
-    status_width = 10
-    write_result(f"{'Watchdog':<{status_width}} [OK]")
-
 def main():
 
     if check_result_file():
-        subprocess.run(["cat", "/opt/rk3568_test/src/result.log"], capture_output=True, text=True)
-        subprocess.run(["rm", "/opt/rk3568_test/src/result.log"])
+        write_result(f"{'Watchdog':<{status_width}} [OK]")
+        subprocess.run(["cat", "/opt/rk3568_test/src/results.log"], capture_output=True, text=True)
+        subprocess.run(["rm", "/opt/rk3568_test/src/results.log"])
     else: 
         network_status = network.ping()
         usb_status = usb.run()
