@@ -25,55 +25,81 @@ i2c = I2C()
 can = Can("can0", "can1")
 rtc = Rtc()
 
-def main():
-    network_status = network.ping()
-    usb_status = usb.run()
-    can_status = can.test_channels()
-    i2c_status, eeprom_status = i2c.run()
-    rtc_status = rtc.read_rtc()
-    wd_status = subprocess.run(["ls", "/dev/watchdog"], capture_output=True, text=True)
-    logging.info(f"Watchdog status: {wd_status.stdout}")
+def write_result(text):
+    with open('results.log', 'w') as f:
+        f.write(text)
+
+def remove_result():
+    subprocess.run(["rm", "results.log"])
+
+def check_result_file():
+    try:
+        result = subprocess.run(["ls", "/opt/rk3568_test/src/result.log"], capture_output=True, check=True)
+        logging.info("Results file exists")
+        return True
+    except subprocess.CalledProcessError:
+        logging.info("Results file does not exist") 
+        return False
+    
+def test_watchdog():
+    subprocess.run(["echo", "1", ">", "/dev/watchdog"])
+
+    logging.info("Watchdog activated")
+    logging.info("System will reboot in 30 seconds...")
 
     status_width = 10
-    print("Results")
-    print("=" * 50)
+    write_result(f"{'Watchdog':<{status_width}} [OK]")
 
-    if network_status == 0:
-        logging.info(f"{'Network':<{status_width}} [OK]")
-    else:
-        logging.error(f"{'Network':<{status_width}} failed")
+def main():
 
-    if usb_status == 0:
-        logging.info(f"{'USB':<{status_width}} [OK]")
-    else:
-        logging.error(f"{'USB':<{status_width}} failed")
+    if check_result_file():
+        subprocess.run(["cat", "/opt/rk3568_test/src/result.log"], capture_output=True, text=True)
+        subprocess.run(["rm", "/opt/rk3568_test/src/result.log"])
+    else: 
+        network_status = network.ping()
+        usb_status = usb.run()
+        can_status = can.test_channels()
+        i2c_status = i2c.run()
+        rtc_status = rtc.read_rtc()
 
-    if can_status == 0:
-        logging.info(f"{'CAN':<{status_width}} [OK]")
-    else:
-        logging.error(f"{'CAN':<{status_width}} failed")
+        wd_status = subprocess.run(["ls", "/dev/watchdog"], capture_output=True, text=True)
+        logging.info(f"Watchdog status: {wd_status.stdout}")
 
-    if i2c_status == True:
-        logging.info(f"{'I2C':<{status_width}} [OK]")
-    else:
-        logging.error(f"{'I2C':<{status_width}} failed")
-    if eeprom_status == True:
-        logging.info(f"{'EEPROM':<{status_width}} [OK]")
-    else:
-        logging.error(f"{'EEPROM':<{status_width}} failed")
+        status_width = 10
+        write_result("Results")
+        write_result("=" * 50)
 
-    if rtc_status != None:
-        logging.info(f"{'RTC':<{status_width}} [OK]")
-    else:
-        logging.error(f"{'RTC':<{status_width}} failed")
+        if network_status == 0:
+            write_result(f"{'Network':<{status_width}} [OK]")
+        else:
+            write_result(f"{'Network':<{status_width}} [FAILED]")
 
-    if wd_status.returncode == 0:
-        logging.info(f"{'Watchdog':<{status_width}} [OK]")
-    else:
-        logging.error(f"{'Watchdog':<{status_width}} failed")
+        if usb_status == 0:
+            write_result(f"{'USB':<{status_width}} [OK]")
+        else:
+            write_result(f"{'USB':<{status_width}} [FAILED]")
 
-    print("=" * 50)
+        if can_status == 0:
+            write_result(f"{'CAN':<{status_width}} [OK]")
+        else:
+            write_result(f"{'CAN':<{status_width}} [FAILED]")
 
-        
+        if i2c_status == True:
+            write_result(f"{'I2C':<{status_width}} [OK]")
+        else:
+            write_result(f"{'I2C':<{status_width}} [FAILED]")
+
+        if rtc_status != None:
+            write_result(f"{'RTC':<{status_width}} [OK]")
+        else:
+            write_result(f"{'RTC':<{status_width}} [FAILED]")
+
+        if wd_status.returncode == 0:
+            write_result(f"{'Watchdog':<{status_width}} [OK]")
+        else:
+            write_result(f"{'Watchdog':<{status_width}} [FAILED]")
+        write_result("=" * 50)
+        test_watchdog()
+
 if __name__ == "__main__":
     main()
