@@ -25,13 +25,18 @@ i2c = I2C()
 can = Can("can0", "can1")
 rtc = Rtc()
 
+import os
+
 def write_result(text):
     try: 
         with open('/opt/rk3568_test/src/results.log', 'a') as f:
             f.write(text + '\n')
+            f.flush()
+            os.fsync(f.fileno()) 
     except Exception as e:
         logging.error(f"Error writing to results file: {e}")
         return False
+
 
 def close_results():
     try:
@@ -48,11 +53,9 @@ def remove_result():
 
 def check_result_file():
     try:
-        result = subprocess.run(["sudo", "ls", "/opt/rk3568_test/src/results.log"], capture_output=True, check=True)
-        logging.info("Results file exists")
+        subprocess.run(["sudo", "ls", "/opt/rk3568_test/src/results.log"], capture_output=True, check=True)
         return True
     except subprocess.CalledProcessError:
-        logging.info("Results file does not exist") 
         return False
     
 def test_watchdog():
