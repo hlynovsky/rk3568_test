@@ -64,6 +64,7 @@ def test_watchdog():
 def main():
 
     if check_result_file():
+        status_width = 10
         write_result(f"{'Watchdog':<{status_width}} [OK]")
         subprocess.run(["cat", "/opt/rk3568_test/src/results.log"], capture_output=True, text=True)
         subprocess.run(["rm", "/opt/rk3568_test/src/results.log"])
