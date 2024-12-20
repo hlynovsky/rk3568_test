@@ -26,8 +26,8 @@ can = Can("can0", "can1")
 rtc = Rtc()
 
 def write_result(text):
-    with open('results.log', 'w') as f:
-        f.write(text)
+    with open('results.log', 'a') as f:
+        f.write(text + '\n')
 
 def remove_result():
     subprocess.run(["rm", "results.log"])
@@ -42,7 +42,7 @@ def check_result_file():
         return False
     
 def test_watchdog():
-    subprocess.run(["echo", "1", ">", "/dev/watchdog"])
+    subprocess.run(["sudo ","echo", "1", ">", "/dev/watchdog"])
 
     logging.info("Watchdog activated")
     logging.info("System will reboot in 30 seconds...")
