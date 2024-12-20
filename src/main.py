@@ -47,9 +47,16 @@ def close_results():
         logging.error(f"Error closing results file: {e}")
         return False
 
+def read_results():
+    try:
+        with open('/opt/rk3568_test/src/results.log', 'r') as f:
+            content = f.read()
+            logging.info("\n" + content)
+            return True
+    except Exception as e:
+        logging.error(f"Error reading results file: {e}")
+        return False
 
-def remove_result():
-    subprocess.run(["rm", "results.log"])
 
 def check_result_file():
     try:
@@ -60,7 +67,6 @@ def check_result_file():
     
 def test_watchdog():
     subprocess.run(["cat", "/dev/watchdog"])
-
     logging.info("Watchdog activated")
     logging.info("System will reboot in 30 seconds...")
 
@@ -69,7 +75,7 @@ def main():
     if check_result_file():
         status_width = 10
         write_result(f"{'Watchdog':<{status_width}} [OK]")
-        subprocess.run(["cat", "/opt/rk3568_test/src/results.log"], capture_output=True, text=True)
+        read_results()
         subprocess.run(["rm", "/opt/rk3568_test/src/results.log"])
     else: 
         network_status = network.ping()
