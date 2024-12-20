@@ -27,7 +27,7 @@ rtc = Rtc()
 
 def write_result(text):
     try: 
-        with open('results.log', 'a') as f:
+        with open('/opt/rk3568_test/src/results.log', 'a') as f:
             f.write(text + '\n')
     except Exception as e:
         logging.error(f"Error writing to results file: {e}")
@@ -35,7 +35,7 @@ def write_result(text):
 
 def close_results():
     try:
-        with open('results.log', 'r') as f:
+        with open('/opt/rk3568_test/src/results.log', 'r') as f:
             f.close()
         return True
     except Exception as e:
@@ -48,7 +48,7 @@ def remove_result():
 
 def check_result_file():
     try:
-        result = subprocess.run(["ls", "/opt/rk3568_test/src/result.log"], capture_output=True, check=True)
+        result = subprocess.run(["sudo", "ls", "/opt/rk3568_test/src/results.log"], capture_output=True, check=True)
         logging.info("Results file exists")
         return True
     except subprocess.CalledProcessError:
