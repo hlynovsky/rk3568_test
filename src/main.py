@@ -26,8 +26,22 @@ can = Can("can0", "can1")
 rtc = Rtc()
 
 def write_result(text):
-    with open('results.log', 'a') as f:
-        f.write(text + '\n')
+    try: 
+        with open('results.log', 'a') as f:
+            f.write(text + '\n')
+    except Exception as e:
+        logging.error(f"Error writing to results file: {e}")
+        return False
+
+def close_results():
+    try:
+        with open('results.log', 'r') as f:
+            f.close()
+        return True
+    except Exception as e:
+        logging.error(f"Error closing results file: {e}")
+        return False
+
 
 def remove_result():
     subprocess.run(["rm", "results.log"])
@@ -42,7 +56,7 @@ def check_result_file():
         return False
     
 def test_watchdog():
-    subprocess.run(["sudo ","echo", "1", ">", "/dev/watchdog"])
+    subprocess.run(["cat", "/dev/watchdog"])
 
     logging.info("Watchdog activated")
     logging.info("System will reboot in 30 seconds...")
@@ -94,12 +108,8 @@ def main():
         else:
             write_result(f"{'RTC':<{status_width}} [FAILED]")
 
-        if wd_status.returncode == 0:
-            write_result(f"{'Watchdog':<{status_width}} [OK]")
-        else:
-            write_result(f"{'Watchdog':<{status_width}} [FAILED]")
-        write_result("=" * 50)
         test_watchdog()
+        close_results()
 
 if __name__ == "__main__":
     main()
