@@ -1,0 +1,241 @@
+2025-01-09 10:40:55,532 - INFO - eth0 - ok
+2025-01-09 10:40:55,536 - DEBUG - Creating a test file...
+2025-01-09 10:40:56,059 - DEBUG - Mounted /dev/sda1 to /media/sda1
+2025-01-09 10:40:56,060 - DEBUG - 
+Starting test for /media/sda1
+2025-01-09 10:40:56,061 - DEBUG - Testing write speed...
+2025-01-09 10:40:56,274 - DEBUG - Write speed: 118.18 MB/s
+2025-01-09 10:40:56,275 - DEBUG - Testing read speed...
+2025-01-09 10:40:56,490 - DEBUG - Read speed: 117.03 MB/s
+2025-01-09 10:40:56,491 - INFO - USB /media/sda1 Write speed = 118.18 MB/s OK | Read speed = 117.03 MB/s OK
+2025-01-09 10:40:57,422 - DEBUG - File removed from /media/sda1
+2025-01-09 10:40:58,052 - DEBUG - Unmounted /media/sda1
+2025-01-09 10:40:58,195 - INFO - Testing packet transmission from can0...
+2025-01-09 10:40:59,218 - INFO - send 123#00 to can0
+2025-01-09 10:40:59,222 - INFO - can1: can1  123   [1]  00
+2025-01-09 10:40:59,736 - INFO - send 123#01 to can0
+2025-01-09 10:40:59,740 - INFO - can1: can1  123   [1]  01
+2025-01-09 10:41:00,255 - INFO - send 123#02 to can0
+2025-01-09 10:41:00,259 - INFO - can1: can1  123   [1]  02
+2025-01-09 10:41:00,784 - INFO - send 123#03 to can0
+2025-01-09 10:41:00,790 - INFO - can1: can1  123   [1]  03
+2025-01-09 10:41:01,318 - INFO - send 123#04 to can0
+2025-01-09 10:41:01,323 - INFO - can1: can1  123   [1]  04
+2025-01-09 10:41:03,856 - DEBUG - Devices are different
+2025-01-09 10:41:03,859 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2025-01-09 10:41:03,862 - DEBUG - Example: 
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+2025-01-09 10:41:04,117 - INFO - RTC time from /dev/rtc1: b'2017-08-04 09:53:40.834131+00:00\n'
+2025-01-09 10:43:23,902 - INFO - eth0 - ok
+2025-01-09 10:43:23,907 - DEBUG - Creating a test file...
+2025-01-09 10:43:24,699 - DEBUG - Mounted /dev/sda1 to /media/sda1
+2025-01-09 10:43:24,703 - DEBUG - 
+Starting test for /media/sda1
+2025-01-09 10:43:24,708 - DEBUG - Testing write speed...
+2025-01-09 10:43:24,911 - DEBUG - Write speed: 124.74 MB/s
+2025-01-09 10:43:24,912 - DEBUG - Testing read speed...
+2025-01-09 10:43:25,967 - DEBUG - Read speed: 23.71 MB/s
+2025-01-09 10:43:25,970 - INFO - USB /media/sda1 Write speed = 124.74 MB/s OK | Read speed = 23.71 MB/s OK
+2025-01-09 10:43:26,008 - DEBUG - File removed from /media/sda1
+2025-01-09 10:43:26,092 - DEBUG - Unmounted /media/sda1
+2025-01-09 10:43:26,163 - WARNING - Error setting up can0 or can1 to 500000 baudrate (Probably already configured): Command '['sudo', 'ip', 'link', 'set', 'can0', 'up', 'type', 'can', 'bitrate', '500000']' returned non-zero exit status 2.
+2025-01-09 10:43:26,164 - INFO - Testing packet transmission from can0...
+2025-01-09 10:43:27,188 - INFO - send 123#00 to can0
+2025-01-09 10:43:27,191 - INFO - can1: can1  123   [1]  00
+2025-01-09 10:43:28,000 - INFO - send 123#01 to can0
+2025-01-09 10:43:28,004 - INFO - can1: can1  123   [1]  01
+2025-01-09 10:43:28,526 - INFO - send 123#02 to can0
+2025-01-09 10:43:28,530 - INFO - can1: can1  123   [1]  02
+2025-01-09 10:43:29,050 - INFO - send 123#03 to can0
+2025-01-09 10:43:29,054 - INFO - can1: can1  123   [1]  03
+2025-01-09 10:43:29,573 - INFO - send 123#04 to can0
+2025-01-09 10:43:29,577 - INFO - can1: can1  123   [1]  04
+2025-01-09 10:43:32,099 - DEBUG - Devices are different
+2025-01-09 10:43:32,101 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2025-01-09 10:43:32,103 - DEBUG - Example: 
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+2025-01-09 10:43:32,849 - INFO - RTC time from /dev/rtc1: b'2017-08-04 09:55:54.322627+00:00\n'
+2025-01-09 10:45:45,474 - INFO - eth0 - ok
+2025-01-09 10:45:45,475 - DEBUG - Creating a test file...
+2025-01-09 10:45:46,061 - DEBUG - Mounted /dev/sda1 to /media/sda1
+2025-01-09 10:45:46,065 - DEBUG - 
+Starting test for /media/sda1
+2025-01-09 10:45:46,066 - DEBUG - Testing write speed...
+2025-01-09 10:45:46,285 - DEBUG - Write speed: 115.06 MB/s
+2025-01-09 10:45:46,286 - DEBUG - Testing read speed...
+2025-01-09 10:45:47,469 - DEBUG - Read speed: 21.16 MB/s
+2025-01-09 10:45:47,471 - INFO - USB /media/sda1 Write speed = 115.06 MB/s OK | Read speed = 21.16 MB/s OK
+2025-01-09 10:45:47,504 - DEBUG - File removed from /media/sda1
+2025-01-09 10:45:47,572 - DEBUG - Unmounted /media/sda1
+2025-01-09 10:45:47,620 - WARNING - Error setting up can0 or can1 to 500000 baudrate (Probably already configured): Command '['sudo', 'ip', 'link', 'set', 'can0', 'up', 'type', 'can', 'bitrate', '500000']' returned non-zero exit status 2.
+2025-01-09 10:45:47,621 - INFO - Testing packet transmission from can0...
+2025-01-09 10:45:48,643 - INFO - send 123#00 to can0
+2025-01-09 10:45:48,648 - INFO - can1: can1  123   [1]  00
+2025-01-09 10:45:49,163 - INFO - send 123#01 to can0
+2025-01-09 10:45:49,167 - INFO - can1: can1  123   [1]  01
+2025-01-09 10:45:49,683 - INFO - send 123#02 to can0
+2025-01-09 10:45:49,686 - INFO - can1: can1  123   [1]  02
+2025-01-09 10:45:50,202 - INFO - send 123#03 to can0
+2025-01-09 10:45:50,206 - INFO - can1: can1  123   [1]  03
+2025-01-09 10:45:50,739 - INFO - send 123#04 to can0
+2025-01-09 10:45:50,746 - INFO - can1: can1  123   [1]  04
+2025-01-09 10:45:53,284 - DEBUG - Devices are different
+2025-01-09 10:45:53,289 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2025-01-09 10:45:53,293 - DEBUG - Example: 
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+2025-01-09 10:45:53,826 - INFO - RTC time from /dev/rtc1: b'2017-08-04 09:58:01.560365+00:00\n'
+2025-01-09 10:45:53,835 - INFO - Connection to /dev/ttyUSB0 is successful
+2025-01-09 10:45:53,857 - INFO - Watchdog status: /dev/watchdog
+
+2025-01-09 11:16:49,052 - INFO - 
+Results
+==================================================
+Network    [OK]
+USB        [OK]
+CAN        [OK]
+I2C        [OK]
+RTC        [OK]
+USB console [OK]
+Watchdog   [OK]
+
+2025-01-09 11:16:54,382 - INFO - eth0 - ok
+2025-01-09 11:16:54,384 - DEBUG - Creating a test file...
+2025-01-09 11:16:55,109 - DEBUG - Mounted /dev/sda1 to /media/sda1
+2025-01-09 11:16:55,111 - DEBUG - 
+Starting test for /media/sda1
+2025-01-09 11:16:55,112 - DEBUG - Testing write speed...
+2025-01-09 11:16:55,297 - DEBUG - Write speed: 136.13 MB/s
+2025-01-09 11:16:55,298 - DEBUG - Testing read speed...
+2025-01-09 11:16:55,514 - DEBUG - Read speed: 116.43 MB/s
+2025-01-09 11:16:55,515 - INFO - USB /media/sda1 Write speed = 136.13 MB/s OK | Read speed = 116.43 MB/s OK
+2025-01-09 11:16:55,541 - DEBUG - File removed from /media/sda1
+2025-01-09 11:16:55,602 - DEBUG - Unmounted /media/sda1
+2025-01-09 11:16:55,649 - WARNING - Error setting up can0 or can1 to 500000 baudrate (Probably already configured): Command '['sudo', 'ip', 'link', 'set', 'can0', 'up', 'type', 'can', 'bitrate', '500000']' returned non-zero exit status 2.
+2025-01-09 11:16:55,650 - INFO - Testing packet transmission from can0...
+2025-01-09 11:16:56,673 - INFO - send 123#00 to can0
+2025-01-09 11:16:56,679 - INFO - can1: can1  123   [1]  00
+2025-01-09 11:16:57,194 - INFO - send 123#01 to can0
+2025-01-09 11:16:57,198 - INFO - can1: can1  123   [1]  01
+2025-01-09 11:16:57,716 - INFO - send 123#02 to can0
+2025-01-09 11:16:57,719 - INFO - can1: can1  123   [1]  02
+2025-01-09 11:16:58,234 - INFO - send 123#03 to can0
+2025-01-09 11:16:58,238 - INFO - can1: can1  123   [1]  03
+2025-01-09 11:16:58,753 - INFO - send 123#04 to can0
+2025-01-09 11:16:58,757 - INFO - can1: can1  123   [1]  04
+2025-01-09 11:17:01,276 - DEBUG - Devices are different
+2025-01-09 11:17:01,279 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2025-01-09 11:17:01,285 - DEBUG - Example: 
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+2025-01-09 11:17:01,375 - INFO - RTC time from /dev/rtc1: b'2017-08-04 10:26:03.980863+00:00\n'
+2025-01-09 11:17:01,383 - INFO - Connection to USB console is successful
+2025-01-09 11:17:01,397 - INFO - Watchdog status: /dev/watchdog
+
+2025-01-09 11:17:05,853 - INFO - 
+Results
+==================================================
+Network    [OK]
+USB        [OK]
+CAN        [OK]
+I2C        [OK]
+RTC        [OK]
+USB console [OK]
+Watchdog   [OK]
+
+2025-01-09 11:17:09,262 - INFO - eth0 - ok
+2025-01-09 11:17:09,264 - DEBUG - Creating a test file...
+2025-01-09 11:17:10,013 - DEBUG - Mounted /dev/sda1 to /media/sda1
+2025-01-09 11:17:10,019 - DEBUG - 
+Starting test for /media/sda1
+2025-01-09 11:17:10,022 - DEBUG - Testing write speed...
+2025-01-09 11:17:10,234 - DEBUG - Write speed: 119.35 MB/s
+2025-01-09 11:17:10,235 - DEBUG - Testing read speed...
+2025-01-09 11:17:10,441 - DEBUG - Read speed: 121.91 MB/s
+2025-01-09 11:17:10,442 - INFO - USB /media/sda1 Write speed = 119.35 MB/s OK | Read speed = 121.91 MB/s OK
+2025-01-09 11:17:10,467 - DEBUG - File removed from /media/sda1
+2025-01-09 11:17:10,528 - DEBUG - Unmounted /media/sda1
+2025-01-09 11:17:10,580 - WARNING - Error setting up can0 or can1 to 500000 baudrate (Probably already configured): Command '['sudo', 'ip', 'link', 'set', 'can0', 'up', 'type', 'can', 'bitrate', '500000']' returned non-zero exit status 2.
+2025-01-09 11:17:10,581 - INFO - Testing packet transmission from can0...
+2025-01-09 11:17:11,602 - INFO - send 123#00 to can0
+2025-01-09 11:17:11,606 - INFO - can1: can1  123   [1]  00
+2025-01-09 11:17:12,122 - INFO - send 123#01 to can0
+2025-01-09 11:17:12,125 - INFO - can1: can1  123   [1]  01
+2025-01-09 11:17:12,641 - INFO - send 123#02 to can0
+2025-01-09 11:17:12,644 - INFO - can1: can1  123   [1]  02
+2025-01-09 11:17:13,160 - INFO - send 123#03 to can0
+2025-01-09 11:17:13,164 - INFO - can1: can1  123   [1]  03
+2025-01-09 11:17:13,696 - INFO - send 123#04 to can0
+2025-01-09 11:17:13,703 - INFO - can1: can1  123   [1]  04
+2025-01-09 11:17:16,241 - DEBUG - Devices are different
+2025-01-09 11:17:16,246 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2025-01-09 11:17:16,250 - DEBUG - Example: 
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+2025-01-09 11:17:16,918 - INFO - RTC time from /dev/rtc1: b'2017-08-04 10:26:17.430307+00:00\n'
+2025-01-09 11:17:16,926 - INFO - Connection to USB console is successful
+2025-01-09 11:17:16,947 - INFO - Watchdog status: /dev/watchdog
+
+2025-01-09 12:22:24,828 - INFO - 
+Results
+==================================================
+Network         [OK]
+USB             [OK]
+CAN             [OK]
+I2C             [OK]
+RTC             [OK]
+USB console     [OK]
+Watchdog   [OK]
+

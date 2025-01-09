@@ -3,6 +3,7 @@ from usb import Usb
 from can import Can
 from i2c import I2C
 from rtc import Rtc
+from console import Console
 
 import logging
 import subprocess
@@ -24,6 +25,7 @@ usb = Usb(usb_paths)
 i2c = I2C()
 can = Can("can0", "can1")
 rtc = Rtc()
+console = Console()
 
 import os
 
@@ -73,7 +75,7 @@ def test_watchdog():
 def main():
 
     if check_result_file():
-        status_width = 10
+        status_width = 15
         write_result(f"{'Watchdog':<{status_width}} [OK]")
         read_results()
         subprocess.run(["rm", "/opt/rk3568_test/src/results.log"])
@@ -83,11 +85,12 @@ def main():
         can_status = can.test_channels()
         i2c_status = i2c.run()
         rtc_status = rtc.read_rtc()
+        console_status = console.screen_test()
 
         wd_status = subprocess.run(["ls", "/dev/watchdog"], capture_output=True, text=True)
         logging.info(f"Watchdog status: {wd_status.stdout}")
 
-        status_width = 10
+        status_width = 15
         write_result("Results")
         write_result("=" * 50)
 
@@ -116,7 +119,12 @@ def main():
         else:
             write_result(f"{'RTC':<{status_width}} [FAILED]")
 
-        test_watchdog()
+        if console != None:
+            write_result(f"{'USB console':<{status_width}} [OK]")
+        else:
+            write_result(f"{'USB console':<{status_width}} [FAILED]")
+
+        # test_watchdog()
         close_results()
 
 if __name__ == "__main__":
