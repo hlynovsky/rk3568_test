@@ -239,3 +239,199 @@ RTC             [OK]
 USB console     [OK]
 Watchdog   [OK]
 
+2025-01-09 14:16:59,676 - INFO - eth0 - ok
+2025-01-09 14:16:59,680 - DEBUG - Creating a test file...
+2025-01-09 14:17:00,241 - DEBUG - Mounted /dev/sda1 to /media/sda1
+2025-01-09 14:17:00,242 - DEBUG - 
+Starting test for /media/sda1
+2025-01-09 14:17:00,243 - DEBUG - Testing write speed...
+2025-01-09 14:17:00,857 - DEBUG - Write speed: 40.80 MB/s
+2025-01-09 14:17:00,858 - DEBUG - Testing read speed...
+2025-01-09 14:17:01,047 - DEBUG - Read speed: 132.63 MB/s
+2025-01-09 14:17:01,048 - INFO - USB /media/sda1 Write speed = 40.80 MB/s OK | Read speed = 132.63 MB/s OK
+2025-01-09 14:17:01,072 - DEBUG - File removed from /media/sda1
+2025-01-09 14:17:01,474 - DEBUG - Unmounted /media/sda1
+2025-01-09 14:17:01,618 - INFO - Testing packet transmission from can0...
+2025-01-09 14:17:02,643 - INFO - send 123#00 to can0
+2025-01-09 14:17:02,647 - INFO - can1: can1  123   [1]  00
+2025-01-09 14:17:03,163 - INFO - send 123#01 to can0
+2025-01-09 14:17:03,167 - INFO - can1: can1  123   [1]  01
+2025-01-09 14:17:03,681 - INFO - send 123#02 to can0
+2025-01-09 14:17:03,684 - INFO - can1: can1  123   [1]  02
+2025-01-09 14:17:04,199 - INFO - send 123#03 to can0
+2025-01-09 14:17:04,203 - INFO - can1: can1  123   [1]  03
+2025-01-09 14:17:04,735 - INFO - send 123#04 to can0
+2025-01-09 14:17:04,743 - INFO - can1: can1  123   [1]  04
+2025-01-09 14:17:07,264 - DEBUG - Devices are different
+2025-01-09 14:17:07,267 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2025-01-09 14:17:07,269 - DEBUG - Example: 
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+2025-01-09 14:17:07,831 - INFO - RTC time from /dev/rtc1: b'2017-08-04 09:44:52.504368+00:00\n'
+2025-01-09 14:17:07,853 - INFO - Connection to USB console is successful
+2025-01-09 14:17:07,876 - INFO - Watchdog status: /dev/watchdog
+
+2025-01-15 12:41:07,401 - INFO - 
+Results
+==================================================
+Network         [OK]
+USB             [FAILED]
+CAN             [OK]
+I2C             [OK]
+RTC             [OK]
+USB console     [OK]
+Watchdog        [OK]
+
+2025-01-15 12:41:12,292 - INFO - eth0 - ok
+2025-01-15 12:41:12,295 - DEBUG - Creating a test file...
+2025-01-15 12:41:12,782 - ERROR - Device /dev/sda1 does not exist
+2025-01-15 12:41:12,783 - ERROR - Mounting failed, stopping tests.
+2025-01-15 12:41:12,824 - WARNING - Error setting up can0 or can1 to 500000 baudrate (Probably already configured): Command '['sudo', 'ip', 'link', 'set', 'can0', 'up', 'type', 'can', 'bitrate', '500000']' returned non-zero exit status 2.
+2025-01-15 12:41:12,825 - INFO - Testing packet transmission from can0...
+2025-01-15 12:41:13,849 - INFO - send 123#00 to can0
+2025-01-15 12:41:13,854 - INFO - can1: can1  123   [1]  00
+2025-01-15 12:41:14,369 - INFO - send 123#01 to can0
+2025-01-15 12:41:14,372 - INFO - can1: can1  123   [1]  01
+2025-01-15 12:41:14,896 - INFO - send 123#02 to can0
+2025-01-15 12:41:14,901 - INFO - can1: can1  123   [1]  02
+2025-01-15 12:41:15,419 - INFO - send 123#03 to can0
+2025-01-15 12:41:15,423 - INFO - can1: can1  123   [1]  03
+2025-01-15 12:41:15,938 - INFO - send 123#04 to can0
+2025-01-15 12:41:15,942 - INFO - can1: can1  123   [1]  04
+2025-01-15 12:41:18,464 - DEBUG - Devices are different
+2025-01-15 12:41:18,467 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2025-01-15 12:41:18,471 - DEBUG - Example: 
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+2025-01-15 12:41:19,079 - INFO - RTC time from /dev/rtc1: b'2017-08-04 09:19:09.462088+00:00\n'
+2025-01-15 12:41:19,097 - INFO - Connection to USB console is successful
+2025-01-15 12:41:19,229 - INFO - Watchdog status: /dev/watchdog
+
+2025-01-15 12:41:31,470 - INFO - 
+Results
+==================================================
+Network         [OK]
+USB             [FAILED]
+CAN             [OK]
+I2C             [OK]
+RTC             [OK]
+USB console     [OK]
+RS232           [OK]
+Watchdog        [OK]
+
+2025-01-15 12:43:14,054 - INFO - eth0 - ok
+2025-01-15 12:43:14,058 - DEBUG - Creating a test file...
+2025-01-15 12:43:14,513 - ERROR - Device /dev/sda1 does not exist
+2025-01-15 12:43:14,514 - ERROR - Mounting failed, stopping tests.
+2025-01-15 12:43:14,566 - WARNING - Error setting up can0 or can1 to 500000 baudrate (Probably already configured): Command '['sudo', 'ip', 'link', 'set', 'can0', 'up', 'type', 'can', 'bitrate', '500000']' returned non-zero exit status 2.
+2025-01-15 12:43:14,569 - INFO - Testing packet transmission from can0...
+2025-01-15 12:43:15,591 - INFO - send 123#00 to can0
+2025-01-15 12:43:15,597 - INFO - can1: can1  123   [1]  00
+2025-01-15 12:43:16,109 - INFO - send 123#01 to can0
+2025-01-15 12:43:16,110 - INFO - can1: can1  123   [1]  01
+2025-01-15 12:43:16,628 - INFO - send 123#02 to can0
+2025-01-15 12:43:16,631 - INFO - can1: can1  123   [1]  02
+2025-01-15 12:43:17,148 - INFO - send 123#03 to can0
+2025-01-15 12:43:17,151 - INFO - can1: can1  123   [1]  03
+2025-01-15 12:43:17,669 - INFO - send 123#04 to can0
+2025-01-15 12:43:17,674 - INFO - can1: can1  123   [1]  04
+2025-01-15 12:43:20,192 - DEBUG - Devices are different
+2025-01-15 12:43:20,193 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2025-01-15 12:43:20,196 - DEBUG - Example: 
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+2025-01-15 12:43:21,134 - INFO - RTC time from /dev/rtc1: b'2017-08-04 09:20:59.138317+00:00\n'
+2025-01-15 12:43:21,152 - INFO - Connection to USB console is successful
+2025-01-15 12:43:21,264 - INFO - Sent and received: 123
+2025-01-15 12:43:21,285 - INFO - Watchdog status: /dev/watchdog
+
+2025-01-15 12:44:01,620 - INFO - 
+Results
+==================================================
+Network         [OK]
+USB             [FAILED]
+CAN             [OK]
+I2C             [OK]
+RTC             [OK]
+USB console     [OK]
+RS232           [OK]
+Watchdog        [OK]
+
+2025-01-15 12:44:05,174 - INFO - eth0 - ok
+2025-01-15 12:44:05,176 - DEBUG - Creating a test file...
+2025-01-15 12:44:05,664 - ERROR - Device /dev/sda1 does not exist
+2025-01-15 12:44:05,665 - ERROR - Mounting failed, stopping tests.
+2025-01-15 12:44:05,703 - WARNING - Error setting up can0 or can1 to 500000 baudrate (Probably already configured): Command '['sudo', 'ip', 'link', 'set', 'can0', 'up', 'type', 'can', 'bitrate', '500000']' returned non-zero exit status 2.
+2025-01-15 12:44:05,705 - INFO - Testing packet transmission from can0...
+2025-01-15 12:44:06,721 - INFO - send 123#00 to can0
+2025-01-15 12:44:06,723 - INFO - can1: can1  123   [1]  00
+2025-01-15 12:44:07,240 - INFO - send 123#01 to can0
+2025-01-15 12:44:07,244 - INFO - can1: can1  123   [1]  01
+2025-01-15 12:44:07,759 - INFO - send 123#02 to can0
+2025-01-15 12:44:07,763 - INFO - can1: can1  123   [1]  02
+2025-01-15 12:44:08,279 - INFO - send 123#03 to can0
+2025-01-15 12:44:08,283 - INFO - can1: can1  123   [1]  03
+2025-01-15 12:44:08,798 - INFO - send 123#04 to can0
+2025-01-15 12:44:08,804 - INFO - can1: can1  123   [1]  04
+2025-01-15 12:44:11,343 - DEBUG - Devices are different
+2025-01-15 12:44:11,346 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2025-01-15 12:44:11,354 - DEBUG - Example: 
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+2025-01-15 12:44:12,173 - INFO - RTC time from /dev/rtc1: b'2017-08-04 09:21:45.252478+00:00\n'
+2025-01-15 12:44:12,191 - INFO - Connection to USB console is successful
+2025-01-15 12:44:12,303 - INFO - RS232 - Sent and received: 123 successfull!
+2025-01-15 12:44:12,324 - INFO - Watchdog status: /dev/watchdog
+
+2025-01-15 12:49:07,305 - INFO - 
+Results
+==================================================
+Network         [OK]
+USB             [FAILED]
+CAN             [OK]
+I2C             [OK]
+RTC             [OK]
+USB console     [OK]
+RS232           [OK]
+Watchdog        [OK]
+

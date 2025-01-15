@@ -4,6 +4,7 @@ from can import Can
 from i2c import I2C
 from rtc import Rtc
 from console import Console
+from rs232 import RS232
 
 import logging
 import subprocess
@@ -26,6 +27,7 @@ i2c = I2C()
 can = Can("can0", "can1")
 rtc = Rtc()
 console = Console()
+rs232 = RS232()
 
 import os
 
@@ -86,6 +88,7 @@ def main():
         i2c_status = i2c.run()
         rtc_status = rtc.read_rtc()
         console_status = console.screen_test()
+        rs232_status = rs232.send_and_receive()
 
         wd_status = subprocess.run(["ls", "/dev/watchdog"], capture_output=True, text=True)
         logging.info(f"Watchdog status: {wd_status.stdout}")
@@ -124,8 +127,25 @@ def main():
         else:
             write_result(f"{'USB console':<{status_width}} [FAILED]")
 
+        if rs232_status != None:
+            write_result(f"{'RS232':<{status_width}} [OK]")
+        else:
+            write_result(f"{'RS232':<{status_width}} [FAILED]")
+
         # test_watchdog()
         close_results()
+
+# if __name__ == "__main__":
+#     try:
+#         rs232 = RS232()
+#         result = rs232.send_and_receive()
+#         print(f"Sent and received: {result}")
+#     except serial.SerialException as e:
+#         print(f"Error: {str(e)}")
+#     finally:
+#         if 'rs232' in locals():
+#             rs232.close()
+
 
 if __name__ == "__main__":
     main()
