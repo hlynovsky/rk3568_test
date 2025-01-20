@@ -5,6 +5,7 @@ from i2c import I2C
 from rtc import Rtc
 from console import Console
 from rs232 import RS232
+from gpio import GPIO
 
 import logging
 import subprocess
@@ -28,6 +29,7 @@ can = Can("can0", "can1")
 rtc = Rtc()
 console = Console()
 rs232 = RS232()
+gpio = GPIO()
 
 import os
 
@@ -89,6 +91,7 @@ def main():
         rtc_status = rtc.read_rtc()
         console_status = console.screen_test()
         rs232_status = rs232.send_and_receive()
+        gpio_status = gpio.run()
 
         wd_status = subprocess.run(["ls", "/dev/watchdog"], capture_output=True, text=True)
         logging.info(f"Watchdog status: {wd_status.stdout}")
@@ -132,20 +135,13 @@ def main():
         else:
             write_result(f"{'RS232':<{status_width}} [FAILED]")
 
-        # test_watchdog()
+        if gpio_status != None:
+            write_result(f"{'GPIO':<{status_width}} [OK]")
+        else:
+            write_result(f"{'GPIO':<{status_width}} [FAILED]")
+
+        test_watchdog()
         close_results()
-
-# if __name__ == "__main__":
-#     try:
-#         rs232 = RS232()
-#         result = rs232.send_and_receive()
-#         print(f"Sent and received: {result}")
-#     except serial.SerialException as e:
-#         print(f"Error: {str(e)}")
-#     finally:
-#         if 'rs232' in locals():
-#             rs232.close()
-
 
 if __name__ == "__main__":
     main()

@@ -435,3 +435,471 @@ USB console     [OK]
 RS232           [OK]
 Watchdog        [OK]
 
+2025-01-20 08:49:09,135 - INFO - eth0 - ok
+2025-01-20 08:49:09,141 - DEBUG - Creating a test file...
+2025-01-20 08:49:09,810 - DEBUG - Mounted /dev/sda1 to /media/sda1
+2025-01-20 08:49:09,813 - DEBUG - 
+Starting test for /media/sda1
+2025-01-20 08:49:09,816 - DEBUG - Testing write speed...
+2025-01-20 08:49:10,950 - DEBUG - Write speed: 22.07 MB/s
+2025-01-20 08:49:10,952 - DEBUG - Testing read speed...
+2025-01-20 08:49:11,145 - DEBUG - Read speed: 130.36 MB/s
+2025-01-20 08:49:11,146 - INFO - USB /media/sda1 Write speed = 22.07 MB/s OK | Read speed = 130.36 MB/s OK
+2025-01-20 08:49:11,214 - DEBUG - File removed from /media/sda1
+2025-01-20 08:49:12,554 - DEBUG - Unmounted /media/sda1
+2025-01-20 08:49:12,711 - INFO - Testing packet transmission from can0...
+2025-01-20 08:49:13,739 - INFO - send 123#00 to can0
+2025-01-20 08:49:13,742 - INFO - can1: can1  123   [1]  00
+2025-01-20 08:49:14,251 - INFO - send 123#01 to can0
+2025-01-20 08:49:14,253 - INFO - can1: can1  123   [1]  01
+2025-01-20 08:49:14,762 - INFO - send 123#02 to can0
+2025-01-20 08:49:14,764 - INFO - can1: can1  123   [1]  02
+2025-01-20 08:49:15,279 - INFO - send 123#03 to can0
+2025-01-20 08:49:15,282 - INFO - can1: can1  123   [1]  03
+2025-01-20 08:49:15,800 - INFO - send 123#04 to can0
+2025-01-20 08:49:15,804 - INFO - can1: can1  123   [1]  04
+2025-01-20 08:49:18,352 - DEBUG - Devices are different
+2025-01-20 08:49:18,356 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2025-01-20 08:49:18,360 - DEBUG - Example: 
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+2025-01-20 08:49:19,428 - INFO - RTC time from /dev/rtc1: b'2017-08-04 09:13:57.071540+00:00\n'
+2025-01-20 08:49:19,434 - INFO - Connection to USB console is successful
+2025-01-20 08:49:19,539 - INFO - RS232 - Sent and received: 123 successfull!
+2025-01-20 08:49:46,040 - INFO - eth0 - ok
+2025-01-20 08:49:46,043 - DEBUG - Creating a test file...
+2025-01-20 08:49:46,670 - DEBUG - Mounted /dev/sda1 to /media/sda1
+2025-01-20 08:49:46,672 - DEBUG - 
+Starting test for /media/sda1
+2025-01-20 08:49:46,672 - DEBUG - Testing write speed...
+2025-01-20 08:49:46,951 - DEBUG - Write speed: 90.10 MB/s
+2025-01-20 08:49:46,952 - DEBUG - Testing read speed...
+2025-01-20 08:49:47,600 - DEBUG - Read speed: 38.64 MB/s
+2025-01-20 08:49:47,602 - INFO - USB /media/sda1 Write speed = 90.10 MB/s OK | Read speed = 38.64 MB/s OK
+2025-01-20 08:49:47,670 - DEBUG - File removed from /media/sda1
+2025-01-20 08:49:48,193 - DEBUG - Unmounted /media/sda1
+2025-01-20 08:49:48,276 - WARNING - Error setting up can0 or can1 to 500000 baudrate (Probably already configured): Command '['sudo', 'ip', 'link', 'set', 'can0', 'up', 'type', 'can', 'bitrate', '500000']' returned non-zero exit status 2.
+2025-01-20 08:49:48,278 - INFO - Testing packet transmission from can0...
+2025-01-20 08:49:49,296 - INFO - send 123#00 to can0
+2025-01-20 08:49:49,300 - INFO - can1: can1  123   [1]  00
+2025-01-20 08:49:49,815 - INFO - send 123#01 to can0
+2025-01-20 08:49:49,819 - INFO - can1: can1  123   [1]  01
+2025-01-20 08:49:50,334 - INFO - send 123#02 to can0
+2025-01-20 08:49:50,338 - INFO - can1: can1  123   [1]  02
+2025-01-20 08:49:50,851 - INFO - send 123#03 to can0
+2025-01-20 08:49:50,854 - INFO - can1: can1  123   [1]  03
+2025-01-20 08:49:51,366 - INFO - send 123#04 to can0
+2025-01-20 08:49:51,372 - INFO - can1: can1  123   [1]  04
+2025-01-20 08:49:53,895 - DEBUG - Devices are different
+2025-01-20 08:49:53,898 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2025-01-20 08:49:53,902 - DEBUG - Example: 
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+2025-01-20 08:49:54,885 - INFO - RTC time from /dev/rtc1: b'2017-08-04 09:14:29.104005+00:00\n'
+2025-01-20 08:49:54,890 - INFO - Connection to USB console is successful
+2025-01-20 08:49:54,995 - INFO - RS232 - Sent and received: 123 successfull!
+2025-01-20 08:49:55,000 - INFO - GPIO20 initial value: 1
+2025-01-20 08:49:55,005 - INFO - GPIO20 after writing 0: 0
+2025-01-20 08:49:55,267 - INFO - GPIO21 initial value: 1
+2025-01-20 08:49:55,272 - INFO - GPIO21 after writing 0: 0
+2025-01-20 08:49:55,535 - INFO - GPIO22 initial value: 1
+2025-01-20 08:49:55,540 - INFO - GPIO22 after writing 0: 0
+2025-01-20 08:49:55,799 - INFO - GPIO24 initial value: 1
+2025-01-20 08:49:55,803 - INFO - GPIO24 after writing 0: 1
+2025-01-20 08:49:56,060 - INFO - GPIO25 initial value: 1
+2025-01-20 08:49:56,064 - INFO - GPIO25 after writing 0: 1
+2025-01-20 08:49:56,321 - INFO - GPIO26 initial value: 0
+2025-01-20 08:49:56,325 - INFO - GPIO26 after writing 0: 0
+2025-01-20 08:49:56,583 - INFO - GPIO27 initial value: 1
+2025-01-20 08:49:56,586 - INFO - GPIO27 after writing 0: 0
+2025-01-20 08:49:56,845 - INFO - GPIO28 initial value: 0
+2025-01-20 08:49:56,850 - INFO - GPIO28 after writing 0: 0
+2025-01-20 08:49:57,109 - INFO - GPIO29 initial value: 0
+2025-01-20 08:49:57,111 - INFO - GPIO29 after writing 0: 0
+2025-01-20 08:49:57,366 - INFO - GPIO30 initial value: 1
+2025-01-20 08:49:57,368 - INFO - GPIO30 after writing 0: 0
+2025-01-20 08:49:57,624 - INFO - GPIO31 initial value: 0
+2025-01-20 08:49:57,628 - INFO - GPIO31 after writing 0: 0
+2025-01-20 08:49:57,887 - INFO - GPIO32 initial value: 1
+2025-01-20 08:49:57,891 - INFO - GPIO32 after writing 0: 1
+2025-01-20 08:49:58,148 - INFO - GPIO33 initial value: 1
+2025-01-20 08:49:58,152 - INFO - GPIO33 after writing 0: 1
+2025-01-20 08:49:58,410 - INFO - GPIO34 initial value: 1
+2025-01-20 08:49:58,413 - INFO - GPIO34 after writing 0: 1
+2025-01-20 08:49:58,670 - INFO - GPIO35 initial value: 1
+2025-01-20 08:49:58,673 - INFO - GPIO35 after writing 0: 1
+2025-01-20 08:49:58,932 - INFO - GPIO36 initial value: 0
+2025-01-20 08:49:58,936 - INFO - GPIO36 after writing 0: 0
+2025-01-20 08:49:59,192 - INFO - GPIO37 initial value: 0
+2025-01-20 08:49:59,194 - INFO - GPIO37 after writing 0: 0
+2025-01-20 08:49:59,451 - INFO - GPIO38 initial value: 0
+2025-01-20 08:49:59,455 - INFO - GPIO38 after writing 0: 0
+2025-01-20 08:49:59,714 - INFO - GPIO39 initial value: 0
+2025-01-20 08:49:59,718 - INFO - GPIO39 after writing 0: 0
+2025-01-20 08:49:59,979 - INFO - GPIO40 initial value: 0
+2025-01-20 08:49:59,984 - INFO - GPIO40 after writing 0: 0
+2025-01-20 08:50:00,243 - INFO - GPIO41 initial value: 0
+2025-01-20 08:50:00,247 - INFO - GPIO41 after writing 0: 0
+2025-01-20 08:50:00,504 - INFO - GPIO42 initial value: 0
+2025-01-20 08:50:00,508 - INFO - GPIO42 after writing 0: 0
+2025-01-20 08:50:00,766 - INFO - GPIO43 initial value: 1
+2025-01-20 08:50:00,769 - INFO - GPIO43 after writing 0: 1
+2025-01-20 08:50:01,026 - INFO - GPIO44 initial value: 1
+2025-01-20 08:50:01,030 - INFO - GPIO44 after writing 0: 1
+2025-01-20 08:50:01,287 - INFO - GPIO45 initial value: 1
+2025-01-20 08:50:01,291 - INFO - GPIO45 after writing 0: 1
+2025-01-20 08:50:01,548 - INFO - GPIO46 initial value: 1
+2025-01-20 08:50:01,552 - INFO - GPIO46 after writing 0: 1
+2025-01-20 08:50:01,810 - INFO - GPIO47 initial value: 1
+2025-01-20 08:50:01,813 - INFO - GPIO47 after writing 0: 1
+2025-01-20 08:50:02,070 - INFO - GPIO48 initial value: 1
+2025-01-20 08:50:02,074 - INFO - GPIO48 after writing 0: 1
+2025-01-20 08:50:02,333 - INFO - GPIO49 initial value: 1
+2025-01-20 08:50:02,341 - INFO - GPIO49 after writing 0: 1
+2025-01-20 08:50:02,602 - INFO - GPIO50 initial value: 1
+2025-01-20 08:50:02,607 - INFO - GPIO50 after writing 0: 1
+2025-01-20 08:50:02,869 - INFO - GPIO51 initial value: 1
+2025-01-20 08:50:02,874 - INFO - GPIO51 after writing 0: 1
+2025-01-20 08:50:03,133 - INFO - GPIO52 initial value: 1
+2025-01-20 08:50:03,136 - INFO - GPIO52 after writing 0: 1
+2025-01-20 08:50:03,392 - INFO - GPIO53 initial value: 0
+2025-01-20 08:50:03,393 - INFO - GPIO53 after writing 0: 0
+2025-01-20 08:50:03,650 - INFO - GPIO54 initial value: 0
+2025-01-20 08:50:03,655 - INFO - GPIO54 after writing 0: 0
+2025-01-20 08:50:03,916 - INFO - GPIO55 initial value: 1
+2025-01-20 08:50:03,922 - INFO - GPIO55 after writing 0: 1
+2025-01-20 08:50:04,183 - INFO - GPIO56 initial value: 0
+2025-01-20 08:50:04,186 - INFO - GPIO56 after writing 0: 0
+2025-01-20 08:50:04,444 - INFO - GPIO57 initial value: 1
+2025-01-20 08:50:04,448 - INFO - GPIO57 after writing 0: 0
+2025-01-20 08:50:04,706 - INFO - GPIO58 initial value: 1
+2025-01-20 08:50:04,710 - INFO - GPIO58 after writing 0: 0
+2025-01-20 08:50:04,967 - INFO - GPIO59 initial value: 1
+2025-01-20 08:50:04,971 - INFO - GPIO59 after writing 0: 0
+2025-01-20 08:50:05,229 - INFO - GPIO60 initial value: 1
+2025-01-20 08:50:05,233 - INFO - GPIO60 after writing 0: 0
+2025-01-20 08:50:05,491 - INFO - GPIO61 initial value: 1
+2025-01-20 08:50:05,495 - INFO - GPIO61 after writing 0: 1
+2025-01-20 08:50:05,753 - INFO - GPIO62 initial value: 1
+2025-01-20 08:50:05,757 - INFO - GPIO62 after writing 0: 1
+2025-01-20 08:50:06,015 - INFO - GPIO63 initial value: 1
+2025-01-20 08:50:06,019 - INFO - GPIO63 after writing 0: 1
+2025-01-20 08:50:06,290 - INFO - Watchdog status: /dev/watchdog
+
+2025-01-20 08:50:09,091 - INFO - 
+Results
+==================================================
+Network         [OK]
+USB             [OK]
+CAN             [OK]
+I2C             [OK]
+RTC             [OK]
+USB console     [OK]
+RS232           [OK]
+GPIO            [FAILED]
+Watchdog        [OK]
+
+2025-01-20 08:51:03,668 - INFO - eth0 - ok
+2025-01-20 08:51:03,670 - DEBUG - Creating a test file...
+2025-01-20 08:51:04,272 - DEBUG - Mounted /dev/sda1 to /media/sda1
+2025-01-20 08:51:04,273 - DEBUG - 
+Starting test for /media/sda1
+2025-01-20 08:51:04,275 - DEBUG - Testing write speed...
+2025-01-20 08:51:04,590 - DEBUG - Write speed: 79.62 MB/s
+2025-01-20 08:51:04,592 - DEBUG - Testing read speed...
+2025-01-20 08:51:04,813 - DEBUG - Read speed: 113.86 MB/s
+2025-01-20 08:51:04,814 - INFO - USB /media/sda1 Write speed = 79.62 MB/s OK | Read speed = 113.86 MB/s OK
+2025-01-20 08:51:04,887 - DEBUG - File removed from /media/sda1
+2025-01-20 08:51:05,418 - DEBUG - Unmounted /media/sda1
+2025-01-20 08:51:05,477 - WARNING - Error setting up can0 or can1 to 500000 baudrate (Probably already configured): Command '['sudo', 'ip', 'link', 'set', 'can0', 'up', 'type', 'can', 'bitrate', '500000']' returned non-zero exit status 2.
+2025-01-20 08:51:05,479 - INFO - Testing packet transmission from can0...
+2025-01-20 08:51:06,516 - INFO - send 123#00 to can0
+2025-01-20 08:51:06,518 - INFO - can1: can1  123   [1]  00
+2025-01-20 08:51:07,040 - INFO - send 123#01 to can0
+2025-01-20 08:51:07,043 - INFO - can1: can1  123   [1]  01
+2025-01-20 08:51:07,557 - INFO - send 123#02 to can0
+2025-01-20 08:51:07,562 - INFO - can1: can1  123   [1]  02
+2025-01-20 08:51:08,077 - INFO - send 123#03 to can0
+2025-01-20 08:51:08,081 - INFO - can1: can1  123   [1]  03
+2025-01-20 08:51:08,597 - INFO - send 123#04 to can0
+2025-01-20 08:51:08,603 - INFO - can1: can1  123   [1]  04
+2025-01-20 08:51:11,121 - DEBUG - Devices are different
+2025-01-20 08:51:11,123 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2025-01-20 08:51:11,125 - DEBUG - Example: 
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+2025-01-20 08:51:11,337 - INFO - RTC time from /dev/rtc1: b'2017-08-04 09:15:38.849142+00:00\n'
+2025-01-20 08:51:11,340 - INFO - Connection to USB console is successful
+2025-01-20 08:51:11,443 - INFO - RS232 - Sent and received: 123 successfull!
+2025-01-20 08:51:11,448 - INFO - GPIO20 initial value: 1
+2025-01-20 08:51:11,454 - INFO - GPIO20 after writing 0: 0
+2025-01-20 08:51:11,713 - INFO - GPIO21 initial value: 1
+2025-01-20 08:51:11,717 - INFO - GPIO21 after writing 0: 0
+2025-01-20 08:51:11,974 - INFO - GPIO22 initial value: 1
+2025-01-20 08:51:11,978 - INFO - GPIO22 after writing 0: 0
+2025-01-20 08:51:12,234 - INFO - GPIO24 initial value: 1
+2025-01-20 08:51:12,236 - INFO - GPIO24 after writing 0: 1
+2025-01-20 08:51:12,495 - INFO - GPIO25 initial value: 1
+2025-01-20 08:51:12,499 - INFO - GPIO25 after writing 0: 1
+2025-01-20 08:51:12,757 - INFO - GPIO26 initial value: 0
+2025-01-20 08:51:12,760 - INFO - GPIO26 after writing 0: 0
+2025-01-20 08:51:13,017 - INFO - GPIO27 initial value: 0
+2025-01-20 08:51:13,021 - INFO - GPIO27 after writing 0: 0
+2025-01-20 08:51:13,279 - INFO - GPIO28 initial value: 0
+2025-01-20 08:51:13,283 - INFO - GPIO28 after writing 0: 0
+2025-01-20 08:51:13,541 - INFO - GPIO29 initial value: 0
+2025-01-20 08:51:13,543 - INFO - GPIO29 after writing 0: 0
+2025-01-20 08:51:13,800 - INFO - GPIO30 initial value: 1
+2025-01-20 08:51:13,804 - INFO - GPIO30 after writing 0: 0
+2025-01-20 08:51:14,061 - INFO - GPIO31 initial value: 0
+2025-01-20 08:51:14,065 - INFO - GPIO31 after writing 0: 0
+2025-01-20 08:51:14,323 - INFO - GPIO32 initial value: 1
+2025-01-20 08:51:14,326 - INFO - GPIO32 after writing 0: 1
+2025-01-20 08:51:14,583 - INFO - GPIO33 initial value: 1
+2025-01-20 08:51:14,587 - INFO - GPIO33 after writing 0: 1
+2025-01-20 08:51:14,844 - INFO - GPIO34 initial value: 1
+2025-01-20 08:51:14,848 - INFO - GPIO34 after writing 0: 1
+2025-01-20 08:51:15,106 - INFO - GPIO35 initial value: 0
+2025-01-20 08:51:15,109 - INFO - GPIO35 after writing 0: 0
+2025-01-20 08:51:15,368 - INFO - GPIO36 initial value: 0
+2025-01-20 08:51:15,373 - INFO - GPIO36 after writing 0: 0
+2025-01-20 08:51:15,634 - INFO - GPIO37 initial value: 0
+2025-01-20 08:51:15,640 - INFO - GPIO37 after writing 0: 0
+2025-01-20 08:51:15,903 - INFO - GPIO38 initial value: 0
+2025-01-20 08:51:15,909 - INFO - GPIO38 after writing 0: 0
+2025-01-20 08:51:16,171 - INFO - GPIO39 initial value: 0
+2025-01-20 08:51:16,175 - INFO - GPIO39 after writing 0: 0
+2025-01-20 08:51:16,433 - INFO - GPIO40 initial value: 0
+2025-01-20 08:51:16,437 - INFO - GPIO40 after writing 0: 0
+2025-01-20 08:51:16,694 - INFO - GPIO41 initial value: 0
+2025-01-20 08:51:16,698 - INFO - GPIO41 after writing 0: 0
+2025-01-20 08:51:16,956 - INFO - GPIO42 initial value: 0
+2025-01-20 08:51:16,959 - INFO - GPIO42 after writing 0: 0
+2025-01-20 08:51:17,218 - INFO - GPIO43 initial value: 1
+2025-01-20 08:51:17,220 - INFO - GPIO43 after writing 0: 1
+2025-01-20 08:51:17,476 - INFO - GPIO44 initial value: 1
+2025-01-20 08:51:17,480 - INFO - GPIO44 after writing 0: 1
+2025-01-20 08:51:17,738 - INFO - GPIO45 initial value: 1
+2025-01-20 08:51:17,742 - INFO - GPIO45 after writing 0: 1
+2025-01-20 08:51:17,999 - INFO - GPIO46 initial value: 1
+2025-01-20 08:51:18,003 - INFO - GPIO46 after writing 0: 1
+2025-01-20 08:51:18,263 - INFO - GPIO47 initial value: 1
+2025-01-20 08:51:18,270 - INFO - GPIO47 after writing 0: 1
+2025-01-20 08:51:18,531 - INFO - GPIO48 initial value: 1
+2025-01-20 08:51:18,535 - INFO - GPIO48 after writing 0: 1
+2025-01-20 08:51:18,793 - INFO - GPIO49 initial value: 1
+2025-01-20 08:51:18,796 - INFO - GPIO49 after writing 0: 1
+2025-01-20 08:51:19,054 - INFO - GPIO50 initial value: 1
+2025-01-20 08:51:19,057 - INFO - GPIO50 after writing 0: 1
+2025-01-20 08:51:19,315 - INFO - GPIO51 initial value: 1
+2025-01-20 08:51:19,318 - INFO - GPIO51 after writing 0: 1
+2025-01-20 08:51:19,578 - INFO - GPIO52 initial value: 1
+2025-01-20 08:51:19,584 - INFO - GPIO52 after writing 0: 1
+2025-01-20 08:51:19,841 - INFO - GPIO53 initial value: 0
+2025-01-20 08:51:19,843 - INFO - GPIO53 after writing 0: 0
+2025-01-20 08:51:20,099 - INFO - GPIO54 initial value: 0
+2025-01-20 08:51:20,103 - INFO - GPIO54 after writing 0: 0
+2025-01-20 08:51:20,361 - INFO - GPIO55 initial value: 1
+2025-01-20 08:51:20,365 - INFO - GPIO55 after writing 0: 1
+2025-01-20 08:51:20,625 - INFO - GPIO56 initial value: 0
+2025-01-20 08:51:20,631 - INFO - GPIO56 after writing 0: 0
+2025-01-20 08:51:20,890 - INFO - GPIO57 initial value: 1
+2025-01-20 08:51:20,894 - INFO - GPIO57 after writing 0: 0
+2025-01-20 08:51:21,152 - INFO - GPIO58 initial value: 1
+2025-01-20 08:51:21,155 - INFO - GPIO58 after writing 0: 0
+2025-01-20 08:51:21,413 - INFO - GPIO59 initial value: 1
+2025-01-20 08:51:21,416 - INFO - GPIO59 after writing 0: 0
+2025-01-20 08:51:21,674 - INFO - GPIO60 initial value: 1
+2025-01-20 08:51:21,679 - INFO - GPIO60 after writing 0: 0
+2025-01-20 08:51:21,937 - INFO - GPIO61 initial value: 1
+2025-01-20 08:51:21,940 - INFO - GPIO61 after writing 0: 1
+2025-01-20 08:51:22,200 - INFO - GPIO62 initial value: 1
+2025-01-20 08:51:22,205 - INFO - GPIO62 after writing 0: 1
+2025-01-20 08:51:22,463 - INFO - GPIO63 initial value: 1
+2025-01-20 08:51:22,466 - INFO - GPIO63 after writing 0: 1
+2025-01-20 08:51:22,744 - INFO - Watchdog status: /dev/watchdog
+
+2025-01-20 08:51:25,256 - INFO - 
+Results
+==================================================
+Network         [OK]
+USB             [OK]
+CAN             [OK]
+I2C             [OK]
+RTC             [OK]
+USB console     [OK]
+RS232           [OK]
+GPIO            [FAILED]
+Watchdog        [OK]
+
+2025-01-20 08:51:56,121 - INFO - eth0 - ok
+2025-01-20 08:51:56,125 - DEBUG - Creating a test file...
+2025-01-20 08:51:56,740 - DEBUG - Mounted /dev/sda1 to /media/sda1
+2025-01-20 08:51:56,743 - DEBUG - 
+Starting test for /media/sda1
+2025-01-20 08:51:56,745 - DEBUG - Testing write speed...
+2025-01-20 08:51:57,051 - DEBUG - Write speed: 82.14 MB/s
+2025-01-20 08:51:57,052 - DEBUG - Testing read speed...
+2025-01-20 08:51:57,255 - DEBUG - Read speed: 123.68 MB/s
+2025-01-20 08:51:57,256 - INFO - USB /media/sda1 Write speed = 82.14 MB/s OK | Read speed = 123.68 MB/s OK
+2025-01-20 08:51:57,325 - DEBUG - File removed from /media/sda1
+2025-01-20 08:51:57,845 - DEBUG - Unmounted /media/sda1
+2025-01-20 08:51:57,926 - WARNING - Error setting up can0 or can1 to 500000 baudrate (Probably already configured): Command '['sudo', 'ip', 'link', 'set', 'can0', 'up', 'type', 'can', 'bitrate', '500000']' returned non-zero exit status 2.
+2025-01-20 08:51:58,260 - INFO - Testing packet transmission from can0...
+2025-01-20 08:51:59,285 - INFO - send 123#00 to can0
+2025-01-20 08:51:59,288 - INFO - can1: can1  123   [1]  00
+2025-01-20 08:51:59,806 - INFO - send 123#01 to can0
+2025-01-20 08:51:59,810 - INFO - can1: can1  123   [1]  01
+2025-01-20 08:52:00,325 - INFO - send 123#02 to can0
+2025-01-20 08:52:00,329 - INFO - can1: can1  123   [1]  02
+2025-01-20 08:52:00,845 - INFO - send 123#03 to can0
+2025-01-20 08:52:00,848 - INFO - can1: can1  123   [1]  03
+2025-01-20 08:52:01,367 - INFO - send 123#04 to can0
+2025-01-20 08:52:01,370 - INFO - can1: can1  123   [1]  04
+2025-01-20 08:52:03,895 - DEBUG - Devices are different
+2025-01-20 08:52:03,902 - DEBUG - Current: 
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+2025-01-20 08:52:03,905 - DEBUG - Example: 
+i2c-0 i2c rk3x-i2c I2C adapter
+i2c-3 i2c rk3x-i2c I2C adapter
+i2c-4 i2c rk3x-i2c I2C adapter
+i2c-5 i2c rk3x-i2c I2C adapter
+i2c-6 i2c DP-AUX I2C adapter
+i2c-7 i2c DesignWare HDMI I2C adapter
+2025-01-20 08:52:04,529 - INFO - RTC time from /dev/rtc1: b'2017-08-04 09:16:26.454324+00:00\n'
+2025-01-20 08:52:04,534 - INFO - Connection to USB console is successful
+2025-01-20 08:52:04,638 - INFO - RS232 - Sent and received: 123 successfull!
+2025-01-20 08:52:04,644 - INFO - GPIO20 initial value: 1
+2025-01-20 08:52:04,650 - INFO - GPIO20 after writing 0: 0
+2025-01-20 08:52:04,910 - INFO - GPIO21 initial value: 1
+2025-01-20 08:52:04,915 - INFO - GPIO21 after writing 0: 0
+2025-01-20 08:52:05,172 - INFO - GPIO22 initial value: 1
+2025-01-20 08:52:05,176 - INFO - GPIO22 after writing 0: 0
+2025-01-20 08:52:05,434 - INFO - GPIO24 initial value: 1
+2025-01-20 08:52:05,438 - INFO - GPIO24 after writing 0: 1
+2025-01-20 08:52:05,696 - INFO - GPIO25 initial value: 1
+2025-01-20 08:52:05,700 - INFO - GPIO25 after writing 0: 1
+2025-01-20 08:52:05,960 - INFO - GPIO26 initial value: 0
+2025-01-20 08:52:05,964 - INFO - GPIO26 after writing 0: 0
+2025-01-20 08:52:06,224 - INFO - GPIO27 initial value: 1
+2025-01-20 08:52:06,227 - INFO - GPIO27 after writing 0: 0
+2025-01-20 08:52:06,485 - INFO - GPIO28 initial value: 0
+2025-01-20 08:52:06,489 - INFO - GPIO28 after writing 0: 0
+2025-01-20 08:52:06,748 - INFO - GPIO29 initial value: 0
+2025-01-20 08:52:06,753 - INFO - GPIO29 after writing 0: 0
+2025-01-20 08:52:07,014 - INFO - GPIO30 initial value: 1
+2025-01-20 08:52:07,019 - INFO - GPIO30 after writing 0: 0
+2025-01-20 08:52:07,281 - INFO - GPIO31 initial value: 0
+2025-01-20 08:52:07,287 - INFO - GPIO31 after writing 0: 0
+2025-01-20 08:52:07,549 - INFO - GPIO32 initial value: 1
+2025-01-20 08:52:07,554 - INFO - GPIO32 after writing 0: 1
+2025-01-20 08:52:07,816 - INFO - GPIO33 initial value: 1
+2025-01-20 08:52:07,821 - INFO - GPIO33 after writing 0: 1
+2025-01-20 08:52:08,084 - INFO - GPIO34 initial value: 1
+2025-01-20 08:52:08,091 - INFO - GPIO34 after writing 0: 1
+2025-01-20 08:52:08,354 - INFO - GPIO35 initial value: 0
+2025-01-20 08:52:08,359 - INFO - GPIO35 after writing 0: 0
+2025-01-20 08:52:08,620 - INFO - GPIO36 initial value: 0
+2025-01-20 08:52:08,625 - INFO - GPIO36 after writing 0: 0
+2025-01-20 08:52:08,887 - INFO - GPIO37 initial value: 0
+2025-01-20 08:52:08,894 - INFO - GPIO37 after writing 0: 0
+2025-01-20 08:52:09,154 - INFO - GPIO38 initial value: 0
+2025-01-20 08:52:09,156 - INFO - GPIO38 after writing 0: 0
+2025-01-20 08:52:09,414 - INFO - GPIO39 initial value: 0
+2025-01-20 08:52:09,417 - INFO - GPIO39 after writing 0: 0
+2025-01-20 08:52:09,676 - INFO - GPIO40 initial value: 0
+2025-01-20 08:52:09,679 - INFO - GPIO40 after writing 0: 0
+2025-01-20 08:52:09,937 - INFO - GPIO41 initial value: 0
+2025-01-20 08:52:09,940 - INFO - GPIO41 after writing 0: 0
+2025-01-20 08:52:10,199 - INFO - GPIO42 initial value: 0
+2025-01-20 08:52:10,205 - INFO - GPIO42 after writing 0: 0
+2025-01-20 08:52:10,464 - INFO - GPIO43 initial value: 1
+2025-01-20 08:52:10,467 - INFO - GPIO43 after writing 0: 1
+2025-01-20 08:52:10,725 - INFO - GPIO44 initial value: 1
+2025-01-20 08:52:10,729 - INFO - GPIO44 after writing 0: 1
+2025-01-20 08:52:10,986 - INFO - GPIO45 initial value: 1
+2025-01-20 08:52:10,990 - INFO - GPIO45 after writing 0: 1
+2025-01-20 08:52:11,248 - INFO - GPIO46 initial value: 1
+2025-01-20 08:52:11,253 - INFO - GPIO46 after writing 0: 1
+2025-01-20 08:52:11,513 - INFO - GPIO47 initial value: 1
+2025-01-20 08:52:11,519 - INFO - GPIO47 after writing 0: 1
+2025-01-20 08:52:11,780 - INFO - GPIO48 initial value: 1
+2025-01-20 08:52:11,784 - INFO - GPIO48 after writing 0: 1
+2025-01-20 08:52:12,045 - INFO - GPIO49 initial value: 1
+2025-01-20 08:52:12,050 - INFO - GPIO49 after writing 0: 1
+2025-01-20 08:52:12,310 - INFO - GPIO50 initial value: 1
+2025-01-20 08:52:12,314 - INFO - GPIO50 after writing 0: 1
+2025-01-20 08:52:12,571 - INFO - GPIO51 initial value: 1
+2025-01-20 08:52:12,575 - INFO - GPIO51 after writing 0: 1
+2025-01-20 08:52:12,833 - INFO - GPIO52 initial value: 1
+2025-01-20 08:52:12,836 - INFO - GPIO52 after writing 0: 1
+2025-01-20 08:52:13,093 - INFO - GPIO53 initial value: 0
+2025-01-20 08:52:13,097 - INFO - GPIO53 after writing 0: 0
+2025-01-20 08:52:13,355 - INFO - GPIO54 initial value: 0
+2025-01-20 08:52:13,359 - INFO - GPIO54 after writing 0: 0
+2025-01-20 08:52:13,617 - INFO - GPIO55 initial value: 1
+2025-01-20 08:52:13,620 - INFO - GPIO55 after writing 0: 1
+2025-01-20 08:52:13,877 - INFO - GPIO56 initial value: 0
+2025-01-20 08:52:13,881 - INFO - GPIO56 after writing 0: 0
+2025-01-20 08:52:14,137 - INFO - GPIO57 initial value: 1
+2025-01-20 08:52:14,140 - INFO - GPIO57 after writing 0: 0
+2025-01-20 08:52:14,400 - INFO - GPIO58 initial value: 1
+2025-01-20 08:52:14,404 - INFO - GPIO58 after writing 0: 0
+2025-01-20 08:52:14,662 - INFO - GPIO59 initial value: 1
+2025-01-20 08:52:14,665 - INFO - GPIO59 after writing 0: 0
+2025-01-20 08:52:14,923 - INFO - GPIO60 initial value: 1
+2025-01-20 08:52:14,926 - INFO - GPIO60 after writing 0: 0
+2025-01-20 08:52:15,183 - INFO - GPIO61 initial value: 1
+2025-01-20 08:52:15,185 - INFO - GPIO61 after writing 0: 1
+2025-01-20 08:52:15,442 - INFO - GPIO62 initial value: 1
+2025-01-20 08:52:15,445 - INFO - GPIO62 after writing 0: 1
+2025-01-20 08:52:15,716 - INFO - Watchdog status: /dev/watchdog
+
+2025-01-20 08:52:24,433 - INFO - 
+Results
+==================================================
+Network         [OK]
+USB             [OK]
+CAN             [OK]
+I2C             [OK]
+RTC             [OK]
+USB console     [OK]
+RS232           [OK]
+GPIO            [OK]
+Watchdog        [OK]
+
