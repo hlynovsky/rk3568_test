@@ -60,14 +60,3 @@ class RS232:
         except serial.SerialException as e:
             logging.error(f"error closing port: {e}")
             return 1
-
-# if __name__ == "__main__":
-#     try:
-#         rs232 = RS232()
-#         result = rs232.send_and_receive()
-#         print(f"Sent and received: {result}")
-#     except serial.SerialException as e:
-#         print(f"Error: {str(e)}")
-#     finally:
-#         if 'rs232' in locals():
-#             rs232.close()

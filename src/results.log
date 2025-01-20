@@ -1,0 +1,10 @@
+Results
+==================================================
+Network         [OK]
+USB             [OK]
+CAN             [OK]
+I2C             [OK]
+RTC             [OK]
+USB console     [OK]
+RS232           [OK]
+GPIO            [OK]
