@@ -1,0 +1,33 @@
+import os
+import logging
+import subprocess
+
+os.makedirs('logs', exist_ok=True)
+
+class Network:
+
+    def __init__(self, interfaces):
+        self.interfaces = interfaces
+
+    def ping(self):
+        for interface in self.interfaces:
+            result = None
+            try:
+                ip = subprocess.check_output(['ip', 'addr', 'show', interface]).decode('utf-8').split('inet ')[1].split('/')[0]
+            except Exception as e:
+                logging.error(f"Error getting IP for {interface}: {e}")
+                logging.error(f"{interface} - failed")
+                continue
+
+            try:
+                result = subprocess.call(['ping', '-c', '3', ip])
+            except Exception as e:
+                logging.error(f"Ping failed for {interface}: {e}")
+                continue
+
+            if result == 0:
+                logging.info(f"{interface} - ok")
+                return 0
+            else:
+                logging.error(f"{interface} - failed")
+                return 1
