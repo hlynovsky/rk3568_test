@@ -1,0 +1,3 @@
+#!/bin/bash
+# TODO: add systemd service
+echo "NMS-SM-EVB_tests installed"

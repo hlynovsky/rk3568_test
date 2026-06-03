@@ -4,3 +4,6 @@ main.spec
 src/.*
 test_*
 test_file
+*egg-info/
+.vscode/
+.pytest_cache/

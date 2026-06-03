@@ -1,0 +1,10 @@
+Package: nms-sm-evb_tests
+Version: 0.1.0
+Section: uncrown
+Priority: optional
+Architecture: arm64
+Essential: no
+Installed-Size: 16
+Maintainer: Yuriy.Khlynovskiy <Yuriy.Khlynovskiy@incomsystem.ru>
+Description: NMS-SM-EVB tests
+ 
